@@ -2,7 +2,7 @@
   "name": "react-version-shift-temp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://arkling-solutions.github.io/",
+  "homepage": "https://sst-inc.github.io/ark-connections/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
