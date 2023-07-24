@@ -1,0 +1,204 @@
+/* Font Setup*/
+@font-face {
+    font-family: FiraCode-Medium;
+    src: url(../font/FiraCode-Medium.woff2) format("woff2");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: FiraCode-SemiBold;
+    src: url(../font/FiraCode-SemiBold.woff2) format("woff2");
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: FiraCode-Bold;
+    src: url(../font/FiraCode-Bold.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal
+}
+
+*{
+    scroll-behavior: smooth;
+    align-items:center;
+    text-align: center;
+    font-family: FiraCode-SemiBold, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 5vw;
+}
+
+p {
+    font-size: 2vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+/* Navbar */
+
+@-webkit-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes Animation { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+
+nav {
+    background: linear-gradient(90deg, lightblue, blue, darkblue);
+    background-size: 300% 200%;
+    -webkit-animation: Animation 5s ease infinite;
+    -moz-animation: Animation 5s ease infinite;
+    animation: Animation 5s ease infinite;
+}
+
+nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav, ul, li, a {
+    text-decoration: none;
+    color: #333;
+  }
+  .logo {
+    width:15vw; 
+    height:15vw;
+    max-height: 40px;
+    max-width: 40px;
+}
+
+.collapse {
+    justify-content: right;
+}
+
+/* Global, Universal styling*/
+
+body {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(lightblue, rgb(92, 198, 196), rgb(0, 110, 255), blue, darkblue, black);
+}
+
+section{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+.hidden{
+    opacity: 0;
+    transition: all 3s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    }
+    .show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    }
+    .hidden:nth-child(2){
+        transition-delay:1000ms ;
+    }
+    .hidden:nth-child(3){
+        transition-delay:400ms ;
+    }
+    .hidden:nth-child(4){
+        transition-delay:600ms ;
+    }
+.flex{
+    display: flex;
+    gap: 4rem;
+}
+    img{
+        height: 150px;
+        width: 100%;
+     
+        
+    }
+    .logo:nth-child(2){
+        transition-delay: 200ms;
+    }
+    .logo:nth-child(3){
+        transition-delay: 400ms;
+    }
+    .logo:nth-child(4){
+        transition-delay: 600ms;
+    }
+  
+  header {
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  main {
+    padding: 40px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  footer *{
+    font-size: 1.5vw;
+  }
+
+
+@keyframes boat_rock {
+    0%   {transform: rotate(-15deg);}
+    50%  {transform: rotate(15deg);}
+    100% {transform: rotate(-15deg);}
+}
+
+@media only screen and (min-width: 768px){
+    #boat {
+        width: 10vw;
+        height: auto;
+        animation: boat_rock 2s ease-in-out infinite;
+    }
+
+    p {
+        font-size: 2vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+
+    .navbar-nav-text-heading {
+        font-size: inherit;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #boat {
+        width: 40vw;
+        height: auto;
+        animation: boat_rock 2s ease-in-out infinite;
+    }
+
+    p {
+        font-size: 5vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+
+    .navbar-nav-text-heading{
+        font-size: 0px !important;
+    }
+}
