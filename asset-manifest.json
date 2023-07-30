@@ -1,18 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.3b937f43.css",
-    "main.js": "/static/js/main.1fbdc2e2.js",
+    "main.css": "/static/css/main.0619a992.css",
+    "main.js": "/static/js/main.d8ee12ba.js",
     "static/js/787.93618544.chunk.js": "/static/js/787.93618544.chunk.js",
-    "static/media/FiraCode-Bold.woff2": "/static/media/FiraCode-Bold.abe3ab87cff86bb05610.woff2",
-    "static/media/FiraCode-SemiBold.woff2": "/static/media/FiraCode-SemiBold.564932952cfbb676de45.woff2",
-    "static/media/FiraCode-Medium.woff2": "/static/media/FiraCode-Medium.1bc138a84f63b384c3f2.woff2",
+    "static/media/InriaSans-Regular.woff2": "/static/media/InriaSans-Regular.561f614d2e58de61fe1b.woff2",
     "index.html": "/index.html",
-    "main.3b937f43.css.map": "/static/css/main.3b937f43.css.map",
-    "main.1fbdc2e2.js.map": "/static/js/main.1fbdc2e2.js.map",
+    "main.0619a992.css.map": "/static/css/main.0619a992.css.map",
+    "main.d8ee12ba.js.map": "/static/js/main.d8ee12ba.js.map",
     "787.93618544.chunk.js.map": "/static/js/787.93618544.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b937f43.css",
-    "static/js/main.1fbdc2e2.js"
+    "static/css/main.0619a992.css",
+    "static/js/main.d8ee12ba.js"
   ]
 }
