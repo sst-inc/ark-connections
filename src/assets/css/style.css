@@ -50,7 +50,7 @@ nav ul {
 }
 
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 800px){
     .navbar-nav-text-heading {
         font-size: inherit;
     }
@@ -64,7 +64,7 @@ nav ul {
     }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1920px){
     .navbar-nav-text-heading{
         font-size: 0px !important;
     }
