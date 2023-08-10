@@ -30,4 +30,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CHANGELOG file
 
 [0.0.1]: https://github.com/sst-inc/ark-connections/releases/tag/0.0.1
-[0.1.0-alpha]: https://github.com/sst-inc/ark-connections/compare/v0.0.1...v0.1.0-alpha
+[0.1.0-alpha]: https://github.com/sst-inc/ark-connections/compare/0.0.1...v0.1.0-alpha
