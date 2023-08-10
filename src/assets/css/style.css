@@ -174,7 +174,8 @@ nav ul {
 }
 
 #roh-banner *{
-    width: 100%;
+    max-width: 1000px;
+    width: 80%;
     height: auto;
 }
 

@@ -23,7 +23,16 @@ function App() {
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <a className="nav-link" href="page-privacy.html">ss</a>
+                    <a className="nav-link active" href="#">Home</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Quiz</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Results</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Profile</a>
                 </li>
             </ul>
         </div>
