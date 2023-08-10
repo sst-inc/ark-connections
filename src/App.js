@@ -36,11 +36,16 @@ function App() {
         </p>
     </div>
     <div id="banner">
-        <p>
+        <p style={{margin: 0}}>
             Explore some orgs that might need help ASAP
         </p>
         <br />
-        
+        <div id="right-here-button">
+            <a><p style={{margin: 0}}>
+                Right here
+            </p></a>
+        </div>
+        <br />
     </div>
     <div id="quiz-flex">
         <div id="not-sure">
