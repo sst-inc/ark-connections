@@ -10,14 +10,8 @@ a {
     font-style: light;
 }
 
-@font-face {
-    font-family: Stoke-Light;
-    src: url(../font/Stoke-Light.woff2) format("woff2");
-    font-weight: 500;
-    font-style: light;
-}
-
 *{
+    font-family: InriaSans-Light;
     scroll-behavior: smooth;
     align-items:center;
     text-align: center;
@@ -174,7 +168,7 @@ nav ul {
 }
 
 #quiz-button > a {
-    font-family: Stoke-Light;
+    font-family: InriaSans-Light;
     color: #146C94;
     text-align: center;
     font-size: 40px;
