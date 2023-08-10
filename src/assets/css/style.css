@@ -113,8 +113,8 @@ nav ul {
 }
 
 #quiz-button {
-    width: 329px;
-    height: 102px;
+    width: 70vw;
+    height: 30vw;
     flex-shrink: 0;
     border-radius: 20px;
     background: #FF6C3E;
@@ -125,8 +125,6 @@ nav ul {
 }
 
 #quiz-button:hover {
-    width: 329px;
-    height: 102px;
     flex-shrink: 0;
     border-radius: 20px;
     background: #d14f26;
@@ -137,8 +135,6 @@ nav ul {
 }
 
 #quiz-button:active {
-    width: 329px;
-    height: 102px;
     flex-shrink: 0;
     border-radius: 20px;
     background: #b54f2f;
@@ -149,8 +145,6 @@ nav ul {
 }
 
 #quiz-button:visited {
-    width: 329px;
-    height: 102px;
     flex-shrink: 0;
     border-radius: 20px;
     background: #FF6C3E;
