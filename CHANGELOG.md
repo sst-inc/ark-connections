@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- This CHANGELOG file.
+- create-react-app
+- Project files
+- CHANGELOG file
 
-[0.0.1]: 
+[0.0.1]: https://github.com/sst-inc/ark-connections/releases/tag/0.0.1
