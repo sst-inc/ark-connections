@@ -1,6 +1,7 @@
 import React from 'react';
 import './assets/ex_libs/bootstrap_4/bootstrap.css'
 import './assets/css/style.css';
+import { bottom } from '@popperjs/core';
 
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
         <p>
             Explore some orgs that might need help ASAP
         </p>
+        <br />
+        
     </div>
     <div id="quiz-flex">
         <div id="not-sure">
@@ -48,7 +51,7 @@ function App() {
         </div>
         <div id="quiz-button">
             <a href="#" id="quiz-anchor">
-                <p>
+                <p style={{margin: 0}}>
                     Take this quiz!
                 </p>
             </a>

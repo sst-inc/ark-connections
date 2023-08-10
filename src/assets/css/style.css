@@ -4,14 +4,14 @@ a {
 
 /* Font Setup*/
 @font-face {
-    font-family: InriaSans-Light;
-    src: url(../font/InriaSans-Light.woff2) format("woff2");
+    font-family: InriaSans-Regular;
+    src: url(../font/InriaSans-Regular.woff2) format("woff2");
     font-weight: 500;
     font-style: light;
 }
 
 *{
-    font-family: InriaSans-Light;
+    font-family: InriaSans-Regular;
     scroll-behavior: smooth;
     align-items:center;
     text-align: center;
@@ -67,7 +67,7 @@ nav ul {
 #start-text {
     color: #146C94;
     text-align: center;
-    font-family: InriaSans-Light;
+    font-family: InriaSans-Regular;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -83,9 +83,9 @@ nav ul {
 }
 
 #banner * {
-    color: #AFD3E2;
+    color: #F2F2F2;
     text-align: center;
-    font-family: InriaSans-Light;
+    font-family: InriaSans-Regular;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -95,7 +95,7 @@ nav ul {
 #not-sure {
     color: #146C94;
     text-align: center;
-    font-family: InriaSans-Light;
+    font-family: InriaSans-Regular;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -161,8 +161,8 @@ nav ul {
 }
 
 #quiz-anchor {
-    font-family: InriaSans-Light;
-    color: #146C94;
+    font-family: InriaSans-Regular;
+    color: #F2F2F2;
     text-align: center;
     font-size: 40px;
     font-style: normal;
