@@ -192,3 +192,12 @@ nav ul {
     box-shadow: 0px 4px 15px 0px rgba(29, 29, 32, 0.25);
     margin: auto;
 }
+#right-here-button:hover {
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: rgba(255, 108, 62, 0.78);
+    box-shadow: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
