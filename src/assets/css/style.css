@@ -52,23 +52,15 @@ nav ul {
     #not-sure {
         margin-top: 2vw;
     }
-
-    #quiz-flex {
-        flex-direction: row;
-    }
 }
 
-@media only screen and (max-width: 1920px){
+@media only screen and (max-width: 800px){
     .navbar-nav-text-heading{
         font-size: 0px !important;
     }
 
     #not-sure {
         margin-top: 1vw;
-    }
-
-    #quiz-flex {
-        flex-direction: column;
     }
 }
 
@@ -117,6 +109,7 @@ nav ul {
     justify-content: center;
     align-items: center;
     margin-top: 2.5vw;
+    flex-direction: column;
 }
 
 #quiz-button {
@@ -167,7 +160,7 @@ nav ul {
     align-items: center;
 }
 
-#quiz-button > a {
+#quiz-anchor {
     font-family: InriaSans-Light;
     color: #146C94;
     text-align: center;
@@ -175,6 +168,10 @@ nav ul {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 #roh-banner {

@@ -47,7 +47,7 @@ function App() {
             </p>
         </div>
         <div id="quiz-button">
-            <a href="#">
+            <a href="#" id="quiz-anchor">
                 <p>
                     Take this quiz!
                 </p>
@@ -55,7 +55,7 @@ function App() {
         </div>
     </div>
     <div id="roh-banner">
-            <img src="./Ray-Of-Hope.png" alt="Ray of Hope banner"></img>
+            <img src="assets/media/rayofhopebanner.png" alt="Ray of Hope banner"></img>
         </div>
   </div>
   );
