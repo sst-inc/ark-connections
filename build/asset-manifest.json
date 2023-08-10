@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.0619a992.css",
-    "main.js": "/static/js/main.d8ee12ba.js",
-    "static/js/787.93618544.chunk.js": "/static/js/787.93618544.chunk.js",
-    "static/media/InriaSans-Regular.woff2": "/static/media/InriaSans-Regular.561f614d2e58de61fe1b.woff2",
-    "index.html": "/index.html",
-    "main.0619a992.css.map": "/static/css/main.0619a992.css.map",
-    "main.d8ee12ba.js.map": "/static/js/main.d8ee12ba.js.map",
-    "787.93618544.chunk.js.map": "/static/js/787.93618544.chunk.js.map"
+    "main.css": "/ark-connections/static/css/main.9372ca6d.css",
+    "main.js": "/ark-connections/static/js/main.a1a68f8e.js",
+    "static/js/787.93618544.chunk.js": "/ark-connections/static/js/787.93618544.chunk.js",
+    "static/media/InriaSans-Light.woff2": "/ark-connections/static/media/InriaSans-Light.e8c7a32c618d475dfee7.woff2",
+    "static/media/Stoke-Light.woff2": "/ark-connections/static/media/Stoke-Light.8570725016690ab450d3.woff2",
+    "index.html": "/ark-connections/index.html",
+    "main.9372ca6d.css.map": "/ark-connections/static/css/main.9372ca6d.css.map",
+    "main.a1a68f8e.js.map": "/ark-connections/static/js/main.a1a68f8e.js.map",
+    "787.93618544.chunk.js.map": "/ark-connections/static/js/787.93618544.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0619a992.css",
-    "static/js/main.d8ee12ba.js"
+    "static/css/main.9372ca6d.css",
+    "static/js/main.a1a68f8e.js"
   ]
 }

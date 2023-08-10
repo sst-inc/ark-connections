@@ -55,7 +55,7 @@ function App() {
         </div>
     </div>
     <div id="roh-banner">
-            <img src="assets/images/Ray-Of-Hope.png" alt="Ray of Hope banner"></img>
+            <img src="./Ray-Of-Hope.png" alt="Ray of Hope banner"></img>
         </div>
   </div>
   );
