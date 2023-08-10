@@ -1,7 +1,6 @@
 import React from 'react';
 import './assets/ex_libs/bootstrap_4/bootstrap.css'
 import './assets/css/style.css';
-import { bottom } from '@popperjs/core';
 
 
 function App() {
@@ -57,8 +56,8 @@ function App() {
             </a>
         </div>
     </div>
-    <div id="roh-banner">
-            <img src="assets/media/rayofhopebanner.png" alt="Ray of Hope banner"></img>
+    <div id="roh-banner" >
+            <a href='https://rayofhope.sg/view-all/'><img src="assets/media/rayofhopebanner.png" alt="Ray of Hope banner"></img></a>
         </div>
   </div>
   );

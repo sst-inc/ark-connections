@@ -176,8 +176,10 @@ nav ul {
 
 #roh-banner {
     margin-top: 2.5vw;
+    text-align: center;
 }
 
 #roh-banner *{
-    width: 100vw;
+    width: 100%;
+    height: auto;
 }
