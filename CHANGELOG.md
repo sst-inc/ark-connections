@@ -14,6 +14,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Styling to fit entire home page to one screen
 - Quiz button colour to a bit lighter
 
+### [0.2.0-alpha] - 2023-08-11
+
+### Added
+- Hashrouter support, hopefully
+
+### Fixed
+- Some styling
+
 ## [0.1.0-alpha] - 2023-08-10
 
 ### Added
@@ -39,5 +47,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CHANGELOG file
 
 [unreleased]: https://github.com/sst-inc/ark-connections/compare/v0.1.0-alpha...HEAD
+[0.2.0-alpha]: https://github.com/sst-inc/ark-connections/compare/v0.1.0-alpha...v0.2.0-alpha
 [0.1.0-alpha]: https://github.com/sst-inc/ark-connections/compare/0.0.1...v0.1.0-alpha
 [0.0.1]: https://github.com/sst-inc/ark-connections/releases/tag/0.0.1
