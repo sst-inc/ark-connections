@@ -1,8 +1,4 @@
-a {
-    text-decoration: none;
-}
-
-/* Font Setup*/
+/*#region fontSetup*/
 @font-face {
     font-family: InriaSans-Regular;
     src: url(../font/InriaSans-Regular.woff2) format("woff2");
@@ -10,29 +6,36 @@ a {
     font-style: light;
 }
 
-*{
+* {
     font-family: InriaSans-Regular;
     scroll-behavior: smooth;
     align-items:center;
     text-align: center;
 }
 
-/* Navbar */
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+/*#endregion*/
+/*#region Navbar*/
 nav ul {
     list-style-type: none;
-  }
-  
-  nav ul li {
+}  
+nav ul li {
     display: inline;
     margin-right: 20px;
-  }
-  
-  nav, ul, li, a {
+}
+
+nav, ul, li, a {
     text-decoration: none;
     color: #333;
-  }
+}
 
-  .logo {
+.logo {
     width:15vw; 
     height:15vw;
     max-height: 40px;
@@ -48,30 +51,22 @@ nav ul {
     .navbar-nav-text-heading {
         font-size: inherit;
     }
-
-    #not-sure {
-        margin-top: 2vw;
-    }
 }
 
 @media only screen and (max-width: 800px){
     .navbar-nav-text-heading{
         font-size: 0px !important;
     }
-
-    #not-sure {
-        margin-top: 1vw;
-    }
 }
 
-#start-text {
+body {
+    padding-top: 66px;
+}
+/*#endregion*/
+/*#region properCssStyling*/
+
+.header {
     color: #146C94;
-    text-align: center;
-    font-family: InriaSans-Regular;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     padding-left: 10vw;
     padding-right: 10vw;
 }
@@ -79,125 +74,51 @@ nav ul {
 #banner {
     background: #19A7CE;
     padding-top: 10px;
-    padding-bottom: 1px;
+    padding-bottom: 10px;
 }
 
 #banner * {
     color: #F2F2F2;
-    text-align: center;
-    font-family: InriaSans-Regular;
     font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
 
-#not-sure {
-    color: #146C94;
-    text-align: center;
-    font-family: InriaSans-Regular;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-left: 10vw;
-    padding-right: 10vw;
+.btn-quiz {
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: rgb(255, 139, 62);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-#quiz-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2.5vw;
-    flex-direction: column;
+.btn-quiz:hover {
+    background: rgb(235, 100, 60);
+    box-shadow: none;
 }
 
-#quiz-button {
+.btn-quiz:active {
+    background: rgb(207, 88, 51);
+    box-shadow: none;
+}
+
+#btn-quiz-lg {
     width: 70vw;
-    height: 10vw;
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: rgba(255, 108, 62, 0.78);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-#quiz-button:hover {
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: rgba(255, 108, 62, 0.78);
-    box-shadow: none;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-#quiz-button:active {
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: rgba(207, 88, 51, 0.78);
-    box-shadow: none;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-#quiz-button:visited {
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: rgba(255, 108, 62, 0.78);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-#quiz-anchor {
-    font-family: InriaSans-Regular;
-    color: #F2F2F2;
-    text-align: center;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-#roh-banner {
-    text-align: center;
-}
-
-#roh-banner *{
-    max-width: 950px;
-    width: 80%;
     height: auto;
 }
 
-#right-here-button {
-    display: flex;
+#btn-quiz-lg p {
+    color: #F2F2F2;
+    font-size: 40px;
+}
+
+#btn-quiz-sm {
     width: 192px;
     height: 49px;
-    padding: 16px 32px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: rgba(255, 108, 62, 0.97);
-    box-shadow: 0px 4px 15px 0px rgba(29, 29, 32, 0.25);
-    margin: auto;
 }
-#right-here-button:hover {
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: rgba(255, 108, 62, 0.78);
-    box-shadow: none;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+
+#roh-banner {
+    padding-top: 1vw;
+    width: 80%;
+    max-width: 950px;
+    height: auto;
 }
+
+/*#endregion*/
