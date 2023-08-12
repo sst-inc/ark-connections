@@ -6,6 +6,15 @@
     font-style: light;
 }
 
+:root{
+    --orange: rgb(255, 139, 62);
+    --darkOrange: #FF6C3E;
+    --white: #F2F2F2;
+    --cyan: #19A7CE;
+    --lightBlue: #AFD3E2;
+    --darkBlue: #146C94;
+}
+
 * {
     font-family: InriaSans-Regular;
     scroll-behavior: smooth;
@@ -53,7 +62,7 @@ nav, ul, li, a {
     }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1920px){
     .navbar-nav-text-heading{
         font-size: 0px !important;
     }
@@ -66,7 +75,7 @@ body {
 /*#region properCssStyling*/
 
 .header {
-    color: #146C94;
+    color: var(--darkBlue);
     padding-left: 10vw;
     padding-right: 10vw;
     max-height: 20vh;
@@ -77,20 +86,20 @@ body {
 }
 
 #banner {
-    background: #19A7CE;
+    background: var(--cyan);
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 #banner * {
-    color: #F2F2F2;
+    color: var(--white);
     font-size: 5vw;
 }
 
 .btn-quiz {
     flex-shrink: 0;
     border-radius: 20px;
-    background: rgb(255, 139, 62);
+    background: var(--orange);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -110,13 +119,29 @@ body {
 }
 
 #btn-quiz-lg p {
-    color: #F2F2F2;
+    color: var(--white);
     font-size: 6vw;
 }
 
 #btn-quiz-sm {
-    width: 192px;
-    height: 49px;
+    width: 20vw;
+    height: auto;
+}
+
+.dark-orange-titles {
+color: var(--darkOrange);
+text-align: center;
+font-family: Imprima;
+font-size: 10vw;
+font-style: bold;
+font-weight: 600;
+line-height: normal;
+}
+
+.light-blue-banner {
+    background-color: var(--lightblue);
+    width: 100%;
+    height: auto;
 }
 
 #roh-banner {
@@ -124,6 +149,20 @@ body {
     width: 80%;
     max-width: 950px;
     height: auto;
+}
+
+#find-out-more{
+    width: 7vw;
+    font-size: 5vw;
+    color: var(--white);
+    border-radius: 1.25rem;
+    background: rgba(255, 108, 62, 0.80);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#find-out-more:hover {
+    background: rgba(255, 108, 62);
+    box-shadow: none;
 }
 
 @media screen and (min-width: 1050px) {

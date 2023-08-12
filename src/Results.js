@@ -35,7 +35,18 @@ return (
               </ul>
           </div>
       </nav>
-    </div>
+      
+    <div style={{background: "#AFD3E2"}}>
+    <p  className="dark-orange-titles">
+            QUIZ RESULTS
+    </p>  
+    </div> 
+    <br/>
+
+    <p className="header" style={{background:"#AFD3E2", fontSize:"3vw"}}> You are most suited for the following organisations!</p>
+    <a href="#/orgs" id="find-out-more">Find Out More!!!</a>
+
+</div>
     );
 }
 

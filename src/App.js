@@ -6,6 +6,7 @@ import Homepage from './Homepage';
 import Quiz from './Quiz';
 import Results from './Results';
 import Profile from './Profile';
+import Organisations from './Organisations';
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
             <Route path="/quiz" element={<Quiz />}/>
             <Route path="/results" element={<Results />}/>
             <Route path="/profile" element={<Profile />}/>
+            <Route path="/orgs" element={<Organisations />}/>
         </Routes>
         </div>
     );

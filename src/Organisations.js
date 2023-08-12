@@ -1,7 +1,8 @@
 import React from "react";
 import './assets/ex_libs/bootstrap_4/bootstrap.css'
 import './assets/css/style.css';
-function Homepage(){
+
+function Organisations(){
 return (
 <div>
     <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
@@ -21,10 +22,10 @@ return (
             <div className="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a className="nav-link active" href="#/">Home</a>
+                        <a className="nav-link" href="#/">Home</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#/quiz">Quiz</a>
+                        <a className="nav-link active" href="#/quiz">Quiz</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#/results">Results</a>
@@ -38,41 +39,11 @@ return (
     </div>
     <div className="header">
         <p id="h1">
-            Welcome to Ark Connections. Feel free to explore possible organisations you can volunteer with or can find help from!
+            Check out other organisations!
         </p>
-    </div>
-    <div id="banner">
-        <p>
-        Explore some orgs that might need help ASAP
-        </p>
-        <br />
-        <a href="#/quiz">
-            <div className="btn btn-quiz" id="btn-quiz-sm">
-                <p>
-                    Right here!
-                </p>
-            </div>
-        </a>
-        <br />
-    </div>
-    <div className="header">
-        <p id="h2">
-            Not sure which organisation to help?
-        </p>
-    </div>
-    <a href="#/quiz">
-    <button className="btn btn-quiz" id="btn-quiz-lg">
-            <p>
-                Take this quiz!
-            </p>
-    </button>
-    </a>
-    <div>
-        <a href='https://rayofhope.sg/view-all/' target="_blank">
-            <img id="roh-banner" src="./assets/media/rayofhopebanner.png" alt="Ray of Hope banner" />
-        </a>
     </div>
 </div>
-);
+)
 }
-export default Homepage;
+
+    export default Organisations;
