@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.0] - 2023-08-12
+## [v0.2.0] - 2023-08-12
 
 ### Added
 - Home Page Basically done WooHoo!!!
@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cronitor
 - Unused styling
 
-### [0.2.0-alpha] - 2023-08-11
+### [v0.2.0-alpha] - 2023-08-11
 
 ### Added
 - Hashrouter support, hopefully
@@ -31,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Some styling
 
-## [0.1.0-alpha] - 2023-08-10
+## [v0.1.0-alpha] - 2023-08-10
 
 ### Added
 - Navbar links (still not working)
@@ -47,7 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - InriaSans-Light
 - Stoke-Light
 
-## [0.0.1] - 2023-08-10
+## [v0.0.1] - 2023-08-10
 
 ### Added
 
@@ -56,7 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CHANGELOG file
 
 [unreleased]: https://github.com/sst-inc/ark-connections/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/sst-inc/ark-connections/compare/v0.2.0-alpha...v0.2.0
-[0.2.0-alpha]: https://github.com/sst-inc/ark-connections/compare/v0.1.0-alpha...v0.2.0-alpha
-[0.1.0-alpha]: https://github.com/sst-inc/ark-connections/compare/0.0.1...v0.1.0-alpha
-[0.0.1]: https://github.com/sst-inc/ark-connections/releases/tag/0.0.1
+[v0.2.0]: https://github.com/sst-inc/ark-connections/compare/v0.2.0-alpha...v0.2.0
+[v0.2.0-alpha]: https://github.com/sst-inc/ark-connections/compare/v0.1.0-alpha...v0.2.0-alpha
+[v0.1.0-alpha]: https://github.com/sst-inc/ark-connections/compare/0.0.1...v0.1.0-alpha
+[v0.0.1]: https://github.com/sst-inc/ark-connections/releases/tag/0.0.1
