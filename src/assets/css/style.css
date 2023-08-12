@@ -144,7 +144,21 @@ line-height: normal;
     height: auto;
 }
 
+.white-text-orange-banner{
+    background: var(--darkOrange);
+    color: var(--white);
+    font-size: 4vw;
+    width: 100%;
+}
+
 #roh-banner {
+    padding-top: 1vw;
+    width: 80%;
+    max-width: 950px;
+    height: auto;
+}
+
+#sinc-banner {
     padding-top: 1vw;
     width: 80%;
     max-width: 950px;

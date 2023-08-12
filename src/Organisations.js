@@ -25,10 +25,10 @@ return (
                         <a className="nav-link" href="#/">Home</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link active" href="#/quiz">Quiz</a>
+                        <a className="nav-link" href="#/quiz">Quiz</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#/results">Results</a>
+                        <a className="nav-link active" href="#/results">Results</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#/profile">Profile</a>
@@ -38,10 +38,24 @@ return (
         </nav>
     </div>
     <div className="header">
-        <p id="h1">
+        <p>
             Check out other organisations!
         </p>
     </div>
+    <a href='https://rayofhope.sg/view-all/' target="_blank">
+        <img id="roh-banner" src="./assets/media/rayofhopebanner.png" alt="Ray of Hope banner" />
+        <p className="white-text-orange-banner">
+            Urgently needs help!<br/>Many roles up for grabs!
+        </p>
+    </a>
+    <a href='https://sincsg.com' target="_blank">
+        <img id="sinc-banner" src="./assets/media/sincbanner.png" alt="Sinc banner" />
+        <p className="white-text-orange-banner">
+            Love making and teaching coding?<br/>This one's for you!
+        </p>
+    </a>
+
+
 </div>
 )
 }

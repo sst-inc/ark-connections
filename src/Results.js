@@ -41,6 +41,7 @@ return (
             QUIZ RESULTS
     </p>  
     </div> 
+    <img alt="Pretend you have interesting results 👍"></img>
     <br/>
 
     <p className="header" style={{background:"#AFD3E2", fontSize:"3vw"}}> You are most suited for the following organisations!</p>
