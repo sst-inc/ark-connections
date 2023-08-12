@@ -46,7 +46,7 @@ return (
         Explore some orgs that might need help ASAP
         </p>
         <br />
-        <a href="#/quiz">
+        <a href="#/orgs">
             <div className="btn btn-quiz" id="btn-quiz-sm">
                 <p>
                     Right here!
