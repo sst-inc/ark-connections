@@ -36,8 +36,8 @@ return (
             </div>
         </nav>
     </div>
-    <div className="header" style={{fontSize: 30}}>
-        <p>
+    <div className="header">
+        <p id="h1">
             Welcome to Ark Connections. Feel free to explore possible organisations you can volunteer with or can find help from!
         </p>
     </div>
@@ -46,27 +46,27 @@ return (
         Explore some orgs that might need help ASAP
         </p>
         <br />
-        <div className="btn btn-quiz" id="btn-quiz-sm">
-            <a href="#/quiz">
+        <a href="#/quiz">
+            <div className="btn btn-quiz" id="btn-quiz-sm">
                 <p>
                     Right here
                 </p>
-            </a>
-        </div>
+            </div>
+        </a>
         <br />
     </div>
-    <div className="header" style={{fontSize: 40}}>
-        <p>
+    <div className="header">
+        <p id="h2">
             Not sure which organisation to help?
         </p>
     </div>
+    <a href="#/quiz">
     <button className="btn btn-quiz" id="btn-quiz-lg">
-        <a href="#/quiz">
             <p>
                 Take this quiz!
             </p>
-        </a>
     </button>
+    </a>
     <div>
         <a href='https://rayofhope.sg/view-all/' target="_blank">
             <img id="roh-banner" src="./assets/media/rayofhopebanner.png" alt="Ray of Hope banner" />

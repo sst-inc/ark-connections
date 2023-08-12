@@ -19,7 +19,7 @@ function Profile(){
               <div className="collapse navbar-collapse" id="collapsibleNavbar">
                   <ul className="navbar-nav">
                       <li className="nav-item">
-                          <a className="nav-link active" href="#/">Home</a>
+                          <a className="nav-link" href="#/">Home</a>
                       </li>
                       <li className="nav-item">
                           <a className="nav-link" href="#/quiz">Quiz</a>
@@ -28,7 +28,7 @@ function Profile(){
                           <a className="nav-link" href="#/results">Results</a>
                       </li>
                       <li className="nav-item">
-                          <a className="nav-link" href="#/profile">Profile</a>
+                          <a className="nav-link active" href="#/profile">Profile</a>
                       </li>
                   </ul>
               </div>

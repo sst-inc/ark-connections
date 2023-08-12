@@ -69,6 +69,11 @@ body {
     color: #146C94;
     padding-left: 10vw;
     padding-right: 10vw;
+    max-height: 20vh;
+}
+
+.header p{
+    font-size: 4.5vw;
 }
 
 #banner {
@@ -79,7 +84,7 @@ body {
 
 #banner * {
     color: #F2F2F2;
-    font-size: 24px;
+    font-size: 5vw;
 }
 
 .btn-quiz {
@@ -106,7 +111,7 @@ body {
 
 #btn-quiz-lg p {
     color: #F2F2F2;
-    font-size: 40px;
+    font-size: 6vw;
 }
 
 #btn-quiz-sm {
@@ -119,6 +124,26 @@ body {
     width: 80%;
     max-width: 950px;
     height: auto;
+}
+
+@media screen and (min-width: 1050px) {
+    #h1 {
+        font-size: 30px !important;
+    }
+
+    #h2 {
+        font-size: 40px !important;
+    }
+
+    #btn-quiz-lg p {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    #banner * {
+        font-size: 24px;
+    }
 }
 
 /*#endregion*/

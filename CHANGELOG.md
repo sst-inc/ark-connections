@@ -8,15 +8,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.0] - 2023-08-12
 
 ### Added
-- Home Page Basically done WooHoo!!! 
+- Home Page Basically done WooHoo!!!
 
 ### Fixed
 - Spacing in home screen
 
 ### Changed
-- Styling to fit entire home page to one screen
+- Styling to try and fit entire home page to one screen
+- Styling to also make everything responsive
 - Styling to have less ids and use more bootstrap elements
 - Quiz button colour to a bit lighter
+
+### Removed
+- Cronitor
+- Unused styling
 
 ### [0.2.0-alpha] - 2023-08-11
 
