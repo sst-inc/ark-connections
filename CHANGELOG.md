@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+## [v0.2.1] - 2023-08-14
+
+### Added
+- Organisation page, Results page
+
+### Changed
+- Variables for colours in css
+
 ## [v0.2.0] - 2023-08-12
 
 ### Added
@@ -57,7 +65,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Project files
 - CHANGELOG file
 
-[unreleased]: https://github.com/sst-inc/ark-connections/compare/v0.2.0...HEAD
+[unreleased]: https://github.com/sst-inc/ark-connections/compare/v0.2.1...HEAD
+[v0.2.1]: https://github.com/sst-inc/ark-connections/compare/v0.2.0...v0.2.1
 [v0.2.0]: https://github.com/sst-inc/ark-connections/compare/v0.2.0-alpha...v0.2.0
 [v0.2.0-alpha]: https://github.com/sst-inc/ark-connections/compare/v0.1.0-alpha...v0.2.0-alpha
 [v0.1.0-alpha]: https://github.com/sst-inc/ark-connections/compare/0.0.1...v0.1.0-alpha
