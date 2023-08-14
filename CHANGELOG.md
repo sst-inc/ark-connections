@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+## Changed
+- Most files to .jsx instead of .js
+- Code formatting
+- Hrefs to neater variants
+
+## Fixed
+- Deployments
+
 ## [v0.2.1] - 2023-08-14
 
 ### Added
