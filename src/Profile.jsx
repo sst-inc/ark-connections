@@ -1,18 +1,20 @@
 import React from "react";
+import "./assets/ex_libs/bootstrap_4/bootstrap.css";
+import "./assets/css/style.css";
+
 
 function Profile() {
+
     return (
+        <>
         <div>
             <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
             <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
                 <a className="navbar-brand" href="#/">
-                    <img
-                        src="./assets/back-arrow.png"
-                        alt="Logo"
-                        className="logo"
-                    />
+                    <i class="fas fa-angle-left"></i>
+                    
                 </a>
                 <a
                     className="navbar-brand navbar-nav-text-heading"
@@ -57,6 +59,10 @@ function Profile() {
                 </div>
             </nav>
         </div>
+        
+        <i className="fas fa-user-alt" id="user-profile"></i>
+        <p id="user-id">Alistair Tan <i className="fas fa-pen" id="edit-name"></i></p>
+        </>
     );
 }
 

@@ -151,6 +151,18 @@ line-height: normal;
     width: 100%;
 }
 
+#user-profile{
+    color: var(--darkBlue);
+    text-align: center;
+    font-size: 20vw;
+}
+
+#user-id{
+    color: var(--cyan);
+    text-align: center;
+    font-size: 5vw;
+}
+
 #roh-banner {
     padding-top: 1vw;
     width: 80%;
