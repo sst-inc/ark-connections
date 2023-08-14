@@ -7,7 +7,7 @@ function Profile() {
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
             <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-                <a className="navbar-brand" href="index.html">
+                <a className="navbar-brand" href="#/">
                     <img
                         src="./assets/back-arrow.png"
                         alt="Logo"
@@ -16,7 +16,7 @@ function Profile() {
                 </a>
                 <a
                     className="navbar-brand navbar-nav-text-heading"
-                    href="index.html"
+                    href="#/"
                 >
                     Ark Connections
                 </a>

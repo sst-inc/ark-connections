@@ -9,12 +9,12 @@ function Homepage() {
             <noscript>You need to enable JavaScript to run this app.</noscript>
             <div>
                 <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-                    <a className="navbar-brand" href="index.html">
+                    <a className="navbar-brand" href="#/">
                         <img src="./favicon.png" alt="Logo" className="logo" />
                     </a>
                     <a
                         className="navbar-brand navbar-nav-text-heading"
-                        href="index.html"
+                        href="#/"
                     >
                         Ark Connections
                     </a>
