@@ -62,14 +62,14 @@ nav, ul, li, a {
     }
 }
 
-@media only screen and (max-width: 1920px){
+@media only screen and (max-width: 800px){
     .navbar-nav-text-heading{
         font-size: 0px !important;
     }
 }
 
 body {
-    padding-top: 66px;
+    padding-top: 132px;
 }
 /*#endregion*/
 /*#region properCssStyling*/

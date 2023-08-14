@@ -11,10 +11,10 @@ return (
     <div>
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
             <a className="navbar-brand" href="index.html">
-            <img src="./favicon.png" alt="Logo" className="logo"/>
+            <img src="./assets/media/back_arrow.png" alt="BackArrow" className="logo"/>
             </a>
             <a className="navbar-brand navbar-nav-text-heading" href="index.html">
-            Ark Connections
+            Back to home
             </a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span className="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@ return (
                         <a className="nav-link" href="#/quiz">Quiz</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link active" href="#/results">Results</a>
+                        <a className="nav-link" href="#/results">Results</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#/profile">Profile</a>

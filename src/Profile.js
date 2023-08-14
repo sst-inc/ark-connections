@@ -8,7 +8,7 @@ function Profile(){
           <noscript>You need to enable JavaScript to run this app.</noscript>
           <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
               <a className="navbar-brand" href="index.html">
-                  <img src="./favicon.png" alt="Logo" className="logo"/>
+                  <img src="./assets/back-arrow.png" alt="Logo" className="logo"/>
               </a>
               <a className="navbar-brand navbar-nav-text-heading" href="index.html">
                   Ark Connections
