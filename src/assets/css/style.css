@@ -140,7 +140,7 @@ line-height: normal;
 }
 
 .light-blue-banner {
-    background-color: var(--lightblue);
+    background-color: var(--lightBlue);
     width: 100%;
     height: auto;
 }

@@ -56,7 +56,7 @@ function Results() {
             </nav>
 
             <div className="content-pale-blue">
-                <p className="dark-orange-titles">QUIZ RESULTS</p>
+                <p className="dark-orange-titles light-blue-banner">QUIZ RESULTS</p>
             </div>
             <img alt="Pretend you have interesting results 👍"></img>
             <br />
