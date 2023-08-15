@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ark-connections/static/css/main.4366b70a.css",
-    "main.js": "/ark-connections/static/js/main.5110bc1a.js",
+    "main.css": "/ark-connections/static/css/main.2d9be5a4.css",
+    "main.js": "/ark-connections/static/js/main.f427eec1.js",
     "static/js/787.93618544.chunk.js": "/ark-connections/static/js/787.93618544.chunk.js",
     "static/media/InriaSans-Regular.woff2": "/ark-connections/static/media/InriaSans-Regular.561f614d2e58de61fe1b.woff2",
     "index.html": "/ark-connections/index.html",
-    "main.4366b70a.css.map": "/ark-connections/static/css/main.4366b70a.css.map",
-    "main.5110bc1a.js.map": "/ark-connections/static/js/main.5110bc1a.js.map",
+    "main.2d9be5a4.css.map": "/ark-connections/static/css/main.2d9be5a4.css.map",
+    "main.f427eec1.js.map": "/ark-connections/static/js/main.f427eec1.js.map",
     "787.93618544.chunk.js.map": "/ark-connections/static/js/787.93618544.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4366b70a.css",
-    "static/js/main.5110bc1a.js"
+    "static/css/main.2d9be5a4.css",
+    "static/js/main.f427eec1.js"
   ]
 }
