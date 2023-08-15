@@ -1,7 +1,28 @@
 import React from "react";
 import "./assets/ex_libs/bootstrap_4/bootstrap.css";
 import "./assets/css/style.css";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
 function Homepage() {
+    // TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyC3wDTEFEoo1A0vwrJSPFh6h2erpic8RZ8",
+    authDomain: "arklink-connections.firebaseapp.com",
+    projectId: "arklink-connections",
+    storageBucket: "arklink-connections.appspot.com",
+    messagingSenderId: "892713028702",
+    appId: "1:892713028702:web:7cc993d8ee7b7275ff38cf",
+    measurementId: "G-63H4JPJSR0"
+    };
+  // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
     return (
         <div>
             <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
