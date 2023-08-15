@@ -63,9 +63,11 @@ function Results() {
 
             <div className="header content-pale-blue vw3">
                 <p>You are most suited for the following organisations!</p>
-                <button className="btn btn-quiz btn-quiz-lg">
-                    <a href="#/orgs">Find Out More!!!</a>
+                <a href="#/orgs">
+                <button className="white-text-orange-banner">
+                    Find Out More!!!
                 </button>
+                </a>
             </div>
         </div>
     );

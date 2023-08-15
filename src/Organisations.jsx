@@ -69,7 +69,7 @@ function Organisations() {
                     src="./assets/media/rayofhopebanner.png"
                     alt="Ray of Hope banner"
                 />
-                <p className="white-text-orange-banner">
+                <p className="white-text-orange-banner" style={{borderRadius:"0vw"}}>
                     Urgently needs help!
                     <br />
                     Many roles up for grabs!
@@ -81,7 +81,7 @@ function Organisations() {
                     src="./assets/media/sincbanner.png"
                     alt="Sinc banner"
                 />
-                <p className="white-text-orange-banner">
+                <p className="white-text-orange-banner" style={{borderRadius:"0vw"}}>
                     Love making and teaching coding?
                     <br />
                     This one's for you!
