@@ -7,10 +7,10 @@
 }
 
 :root{
-    --orange: rgb(255, 139, 62);
+    --orange: #ff8b3e;
     --darkOrange: #FF6C3E;
     --white: #F2F2F2;
-    --cyan: #19A7CE;
+    --cyan: #19a7ce;
     --lightBlue: #AFD3E2;
     --darkBlue: #146C94;
 }

@@ -20,7 +20,11 @@ function Profile() {
     const auth = getAuth(app);
 
     function userLogin(){
-        signInWithPopup(auth, new GoogleAuthProvider());
+        signInWithPopup(auth, new GoogleAuthProvider())
+        .then(result=>{
+            const user = result.user;
+            document.getElementById("user-id").replaceWith(user.displayName);
+        });
     }
 
     onAuthStateChanged(auth, user =>{
@@ -83,7 +87,9 @@ function Profile() {
         </div>
         
         <i className="fas fa-user-alt" id="user-profile"></i>
+        <br/>
         <p id="user-id">Alistair Tan <i className="fas fa-pen" id="edit-name"></i></p>
+        <br/>
         <button onClick={userLogin()} className="white-text-orange-banner" style={{width:"30%"}}> 
         Sign In <span className="fab fa-google"></span>
         </button>
