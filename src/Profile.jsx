@@ -93,6 +93,7 @@ function Profile() {
         <button onClick={userLogin()} className="white-text-orange-banner" style={{width:"30%"}}> 
         Sign In <span className="fab fa-google"></span>
         </button>
+        <footer>Copyright © Arklink Solutions 2023</footer>
         </>
     );
 }
