@@ -198,7 +198,6 @@ strong {
     }
 
     .pop-up {
-        width: 75vw;
         height: 50vw;
         position: relative;
         animation-name: pop-ups;
