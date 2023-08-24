@@ -7,9 +7,9 @@ function Quiz() {
             <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
-            <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                 <a className="navbar-brand" href="#/">
-                    <img src="./favicon.png" alt="Logo" className="logo" />
+                    <img src="assets/media/favicon.png" alt="Logo" className="logo" />
                 </a>
                 <a
                     className="navbar-brand navbar-nav-text-heading"

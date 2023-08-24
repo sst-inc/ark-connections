@@ -9,19 +9,9 @@ function Organisations() {
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
             <div>
-                <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                     <a className="navbar-brand" href="#/">
-                        <img
-                            src="./assets/media/back_arrow.png"
-                            alt="BackArrow"
-                            className="logo"
-                        />
-                    </a>
-                    <a
-                        className="navbar-brand navbar-nav-text-heading"
-                        href="#/"
-                    >
-                        Back to home
+                        <i class="fa-solid fa-arrow-left"></i> Back to home
                     </a>
                     <button
                         className="navbar-toggler"
@@ -60,33 +50,88 @@ function Organisations() {
                     </div>
                 </nav>
             </div>
-            <div className="header">
-                <p>Check out other organisations!</p>
+            <div className="d-flex flex-row">
+                <div className="startText">
+                    <quoteText>
+                        "The gift of <strong>service</strong> leads to a life of{" "}
+                        <strong>love.</strong>"
+                    </quoteText>
+                    <p>~Mary White</p>
+                </div>
+                <div style={{ width: "40%" }}></div>
             </div>
-            <a href="https://rayofhope.sg/view-all/" target="_blank">
-                <img
-                    id="roh-banner"
-                    src="./assets/media/rayofhopebanner.png"
-                    alt="Ray of Hope banner"
-                />
-                <p className="white-text-orange-banner" style={{borderRadius:"0vw"}}>
-                    Urgently needs help!
-                    <br />
-                    Many roles up for grabs!
-                </p>
-            </a>
-            <a href="https://sincsg.com" target="_blank">
-                <img
-                    id="sinc-banner"
-                    src="./assets/media/sincbanner.png"
-                    alt="Sinc banner"
-                />
-                <p className="white-text-orange-banner" style={{borderRadius:"0vw"}}>
-                    Love making and teaching coding?
-                    <br />
-                    This one's for you!
-                </p>
-            </a>
+            <h1>Check out these Organisations!</h1>
+            <div className="pop-up-flex">
+                <div className="pop-up-flex-col">
+                    <div
+                        className="container container-orange pop-up d-flex flex-column"
+                        style={{ justifyContent: "space-around" }}
+                    >
+                        <p>Ray of Hope</p>
+                        <div
+                            className="d-flex flex-row"
+                            style={{
+                                justifyContent: "space-between",
+                                width: "100%",
+                            }}
+                        >
+                            <button className="btn btn-lg">
+                                <a href="https://rayofhope.sg/view-all/">
+                                    <p className="btn-cta-text">Right here!</p>
+                                </a>
+                            </button>
+                            <div style={{ width: "75%", textAlign: "center" }}>
+                                <i class="fa-solid fa-computer pop-up-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className="container container-purple pop-up d-flex flex-column"
+                        style={{ justifyContent: "space-around" }}
+                    >
+                        <p className="h2">
+                            Urgently needs help!
+                            <br />
+                            Many roles up for grabs!
+                        </p>
+                    </div>
+                </div>
+                <div className="pop-up-flex-col">
+                    <div
+                        className="container container-purple pop-up d-flex flex-column"
+                        style={{ justifyContent: "space-around" }}
+                    >
+                        <p>Sinc SG</p>
+                        <div
+                            className="d-flex flex-row"
+                            style={{
+                                justifyContent: "space-between",
+                                width: "100%",
+                            }}
+                        >
+                            <button className="btn btn-lg">
+                                <a href="https://sincsg.com">
+                                    <p className="btn-cta-text">Right here!</p>
+                                </a>
+                            </button>
+                            <div style={{ width: "75%", textAlign: "center" }}>
+                                <i class="fa-solid fa-computer pop-up-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className="container container-orange pop-up d-flex flex-column"
+                        style={{ justifyContent: "space-around" }}
+                    >
+                        <p className="h2">
+                            Many Slots!
+                            <br />
+                            If you like teaching, this one's for you!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <footer>Copyright © Arklink Solutions 2023</footer>
         </div>
     );
 }
