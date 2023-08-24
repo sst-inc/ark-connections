@@ -4,16 +4,21 @@ import "./assets/css/style.css";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup } from "firebase/auth";
+import {
+    GoogleAuthProvider,
+    getAuth,
+    onAuthStateChanged,
+    signInWithPopup,
+} from "firebase/auth";
 
 function Homepage() {
     // TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-  // Initialize Firebase
+    // Initialize Firebase
 
     const firebaseConfig = {
         apiKey: "AIzaSyC3wDTEFEoo1A0vwrJSPFh6h2erpic8RZ8",
@@ -22,14 +27,14 @@ function Homepage() {
         storageBucket: "arklink-connections.appspot.com",
         messagingSenderId: "892713028702",
         appId: "1:892713028702:web:7cc993d8ee7b7275ff38cf",
-        measurementId: "G-63H4JPJSR0"
+        measurementId: "G-63H4JPJSR0",
     };
 
     const app = initializeApp(firebaseConfig);
-    const auth =getAuth(app);
+    const auth = getAuth(app);
 
-    onAuthStateChanged(auth, user =>{
-        console.log('You are logged in as', user);
+    onAuthStateChanged(auth, (user) => {
+        console.log("You are logged in as", user);
     });
 
     return (
@@ -38,13 +43,18 @@ function Homepage() {
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
             <div>
-                <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                     <a className="navbar-brand" href="#/">
-                        <img src="./favicon.png" alt="Logo" className="logo" />
+                        <img
+                            src="assets/media/favicon.png"
+                            alt="Logo"
+                            className="logo"
+                        />
                     </a>
                     <a
                         className="navbar-brand navbar-nav-text-heading"
                         href="#/"
+                        style={{ padding: "5px" }}
                     >
                         Ark Connections
                     </a>
@@ -85,39 +95,123 @@ function Homepage() {
                     </div>
                 </nav>
             </div>
-            <div className="header">
-                <p id="h1">
-                    Welcome to Ark Connections. Feel free to explore possible
-                    organisations you can volunteer with or can find help from!
-                </p>
+            <div className="d-flex flex-row">
+                <div className="startText">
+                    <quoteText>
+                        "The smallest act of <strong>kindness</strong> is worth
+                        more than <strong>the grandest intention.</strong>"
+                    </quoteText>
+                    <p>~Oscar Wilde</p>
+                </div>
+                <div style={{ width: "40%" }}></div>
             </div>
-            <div id="banner">
-                <p>Explore some orgs that might need help ASAP</p>
-                <br />
-                <button className="btn btn-quiz btn-quiz-sm">
-                    <a href="#/orgs">
-                        <p>Right here!</p>
-                    </a>
-                </button>
-                <br />
+            <h1>What can you do here?</h1>
+            <div className="pop-up-flex">
+                <div className="pop-up-flex-col">
+                    <div
+                        className="container container-orange pop-up d-flex flex-column"
+                        style={{ justifyContent: "space-around" }}
+                    >
+                        <p>Explore some orgs that might need help ASAP</p>
+                        <div
+                            className="d-flex flex-row"
+                            style={{
+                                justifyContent: "space-between",
+                                width: "100%",
+                            }}
+                        >
+                            <button className="btn btn-lg">
+                                <a href="#/orgs">
+                                    <p className="btn-cta-text">Right here!</p>
+                                </a>
+                            </button>
+                            <div style={{ width: "75%", textAlign: "center" }}>
+                                <i class="fa-solid fa-computer pop-up-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className="container container-purple pop-up d-flex flex-column"
+                        style={{ justifyContent: "space-around" }}
+                    >
+                        <p className="h2">Ray Of Hope</p>
+                        <div
+                            className="d-flex flex-row"
+                            style={{
+                                justifyContent: "space-between",
+                                width: "100%",
+                            }}
+                        >
+                            <button className="btn btn-lg">
+                                <a
+                                    href="https://rayofhope.sg/view-all/"
+                                    target="_blank"
+                                >
+                                    <p className="btn-cta-text">
+                                        NEEDS HELP <strong>ASAP</strong>
+                                    </p>
+                                </a>
+                            </button>
+                            <div style={{ width: "75%", textAlign: "center" }}>
+                                <i class="fa-regular fa-handshake pop-up-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="pop-up-flex-col">
+                    <div
+                        className="container container-purple pop-up d-flex flex-column"
+                        style={{ justifyContent: "space-around" }}
+                    >
+                        <p className="h2">
+                            Not sure which organisation to help?
+                        </p>
+                        <div
+                            className="d-flex flex-row"
+                            style={{
+                                justifyContent: "space-between",
+                                width: "100%",
+                            }}
+                        >
+                            <button className="btn btn-lg">
+                                <a href="#/quiz">
+                                    <p className="btn-cta-text">
+                                        Take this quiz!
+                                    </p>
+                                </a>
+                            </button>
+                            <div style={{ width: "75%", textAlign: "center" }}>
+                                <i class="fa-solid fa-clipboard-user pop-up-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className="container container-orange pop-up d-flex flex-column"
+                        style={{ justifyContent: "space-around" }}
+                    >
+                        <p className="h2">Sinc Sg</p>
+                        <div
+                            className="d-flex flex-row"
+                            style={{
+                                justifyContent: "space-between",
+                                width: "100%",
+                            }}
+                        >
+                            <button className="btn btn-lg">
+                                <a href="https://sincsg.com" target="_blank">
+                                    <p className="btn-cta-text">
+                                        NEEDS HELP <strong>ASAP</strong>
+                                    </p>
+                                </a>
+                            </button>
+                            <div style={{ width: "75%", textAlign: "center" }}>
+                                <i class="fa-regular fa-handshake pop-up-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="header">
-                <p id="h2">Not sure which organisation to help?</p>
-            </div>
-            <button className="btn btn-quiz btn-quiz-lg">
-                <a href="#/quiz">
-                    <p>Take this quiz!</p>
-                </a>
-            </button>
-            <div>
-                <a href="https://rayofhope.sg/view-all/" target="_blank">
-                    <img
-                        id="roh-banner"
-                        src="./assets/media/rayofhopebanner.png"
-                        alt="Ray of Hope banner"
-                    />
-                </a>
-            </div>
+            <footer>Copyright © Arklink Solutions 2023</footer>
         </div>
     );
 }

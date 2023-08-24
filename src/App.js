@@ -7,6 +7,7 @@ import Quiz from "./Quiz";
 import Results from "./Results";
 import Profile from "./Profile";
 import Organisations from "./Organisations";
+import FilteredOrganisations from "./FilteredOrganisations";
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
                 <Route path="/results" element={<Results />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/orgs" element={<Organisations />} />
+                <Route path="/orgs-filter" element={<FilteredOrganisations />} />
             </Routes>
         </div>
     );
