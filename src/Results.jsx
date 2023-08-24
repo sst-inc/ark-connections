@@ -124,6 +124,7 @@ function Results() {
                     </div>
                 </div>
             </div>
+            <footer>Copyright © Arklink Solutions 2023</footer>
         </div>
     );
 }

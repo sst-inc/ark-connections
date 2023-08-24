@@ -53,6 +53,7 @@ function Quiz() {
                     </ul>
                 </div>
             </nav>
+            <footer>Copyright © Arklink Solutions 2023</footer>
         </div>
     );
 }
