@@ -57,26 +57,26 @@ function FilteredOrganisations() {
                     </div>
                 </nav>
             </div>
-            <div className="d-flex flex-row">
+            <div className="d-flex flex-row fade-in-fade-out">
                 <div className="startText">
                     <quoteText>
-                        "The gift of <strong>service</strong> leads to a life of <strong>love.</strong>"
+                        "Happiness is when what you <strong>think</strong>, what you <strong>say</strong>, and what you <strong>do</strong> are in harmony."
                     </quoteText>
-                    <p>~Mary White</p>
+                    <p>~Mahatma Gandhi</p>
                 </div>
                 <div style={{width: "40%"}}></div>
             </div>
-            <h1>Check out these Organisations!</h1>
+            <h1 className="fade-in-fade-out">Check out these Organisations!</h1>
             {employees.map((employee, index) => {
             return (
-            <div key={index}>
+            <div key={index} className="fade-in-fade-out">
                 <h2>name: {employee.name}</h2>
                 <h2>country: {employee.country}</h2>
                 <hr />
             </div>
             );
         })}
-            <div className="pop-up-flex">
+            <div className="pop-up-flex fade-in-fade-out">
                 <div className="container container-orange pop-up d-flex flex-column" style={{justifyContent:"space-around"}}>
                     <p>Ray of Hope</p>
                     <div className="d-flex flex-row" style={{justifyContent: "space-between", width: "100%"}}>

@@ -11,6 +11,7 @@ function Results() {
             <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
+            <div id='navbar-container'>
             <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                 <a className="navbar-brand" href="#/">
                     <img
@@ -58,6 +59,7 @@ function Results() {
                     </ul>
                 </div>
             </nav>
+            </div>
             <div className="d-flex flex-row">
                 <div className="startText">
                     <quoteText>
@@ -89,7 +91,7 @@ function Results() {
                         className="container container-purple pop-up d-flex flex-column container-results"
                         style={{ justifyContent: "space-around" }}
                     >
-                        <p>2. You are gay</p>
+                        <p>2. You are </p>
                     </div>
                     <div
                         className="container container-orange pop-up d-flex flex-column container-results"

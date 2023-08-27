@@ -26,6 +26,8 @@
     --risingGreen: #7def9c;
     --mediumGreen: #44d46b;
     --darkGreen: #1e873a;
+
+    --floating-animation-time: 5s; 
 }
 
 * {
@@ -71,12 +73,14 @@ nav, ul, li, a {
 @media only screen and (min-width: 800px){
     .navbar-nav-text-heading {
         font-size: inherit;
+        padding: 5px;
     }
 }
 
 @media only screen and (max-width: 800px){
     .navbar-nav-text-heading{
         font-size: 0px !important;
+        padding: 5px;
     }
 }
 
@@ -98,6 +102,11 @@ body {
 
 body > div > div > * {
     padding: 20px;
+    animation: 2s fade-in ease;
+}
+
+#navbar-container {
+    animation: none !important;
 }
 
 strong {
@@ -106,6 +115,11 @@ strong {
 
 /*#endregion*/
 /*#region properCssStyling*/
+
+@keyframes fade-in {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 @keyframes floating {
     0%  {top: 0px}
@@ -116,11 +130,6 @@ strong {
 @keyframes pop-ups {
     0%   {top:5vw; opacity: 0; box-shadow: none;}
     100% {top:0px; opacity: 1;}
-}
-
-@keyframes shadow-down {
-    0% {transform: translateY(0); transform: translateX(0);}
-    100% {transform: translateY(5); transform: translateX(-5);}
 }
 
 .pop-up-flex {
@@ -152,6 +161,7 @@ strong {
         position: relative;
         animation-name: pop-ups;
         animation-duration: 4s;
+        animation-delay: 2s;
         box-shadow: 4px 4px rgba(0,0,0,.25)
     }
 
@@ -202,6 +212,7 @@ strong {
         position: relative;
         animation-name: pop-ups;
         animation-duration: 4s;
+        animation-delay: 2s
     }
 
     .pop-up-flex {
@@ -239,7 +250,7 @@ strong {
 .container-orange {
     background-color: var(--notSoGentleOrange);
     border-radius: 25px;
-    animation: 5s floating ease infinite;
+    animation: var(--floating-animation-time) floating ease infinite;
 }
 
 .container-orange * .btn {
@@ -260,7 +271,7 @@ strong {
 .container-purple {
     background-color: var(--softPurple);
     border-radius: 25px;
-    animation: 5s floating ease infinite;
+    animation: var(--floating-animation-time) floating ease infinite;
 }
 
 .container-purple * .btn {
@@ -281,7 +292,7 @@ strong {
 .container-green {
     background-color: var(--softGreen);
     border-radius: 25px;
-    animation: 5s floating ease infinite;
+    animation: var(--floating-animation-time) floating ease infinite;
 }
 
 .container-green * .btn {

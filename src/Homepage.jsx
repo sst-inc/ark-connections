@@ -42,7 +42,7 @@ function Homepage() {
             <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
-            <div>
+            <div id='navbar-container'>
                 <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                     <a className="navbar-brand" href="#/">
                         <img
