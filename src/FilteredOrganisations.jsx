@@ -7,8 +7,9 @@ function FilteredOrganisations() {
 
     const overAllOrganisations = {
         "RayOfHope": {"name": "Ray Of Hope", "url": "http://rayofhope.com", "filter": ["humans", "elderly", "caretaking"]},
-        "SincSG" : {"name": "Sinc", "url": "http://sincsg.com", "filter": ["humans"]},
-        "SincMY" : {"name": "SincMy", "url": "http://sincmy.com", "filter": ["humans", "elderly"]}
+        "SincSG" : {"name": "Sinc", "url": "http://sincsg.com", "filter": ["humans", "teach"]},
+        "SPCA": {"name": "Society for the Prevention of Cruelty to Animals", "url": "https://spca.org.sg", "filter": ["animals", "environment", "caretaking"]},
+        "NCSS": {"name": "National Council of Social Services", "url": "https://www.ncss.gov.sg/volunteer", "filter": ["humans", "animals"]}
     }
 
     let goodness = {}
@@ -92,7 +93,7 @@ function FilteredOrganisations() {
                 </div>
                 <div style={{width: "40%"}}></div>
             </div>
-            <h1 className="fade-in-fade-out">We think you'll fit best in these organisations: </h1>
+            <h1 className="fade-in-fade-out">We think you'll fit best in these organisations (Sorted from best to Worst): </h1>
             <div className="pop-up-flex">
             {sortedOrg.map((organisation, index) => {
                 console.log(organisation)

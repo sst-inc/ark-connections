@@ -48,7 +48,14 @@ function Quiz() {
             "optn2": "Other",
             "optn1Result": "caretaking",
             "optn2Result": "not to caretake"
-        }
+        },
+        {
+            "question": "Would you teach or not",
+            "optn1": "I would teach",
+            "optn2": "I would prefer not to teach",
+            "optn1Result": "teach",
+            "optn2Result": "no teach"
+        },
     
     ]
         return (
