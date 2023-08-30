@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/ark-connections/static/css/main.c0274368.css",
-    "main.js": "/ark-connections/static/js/main.dbcf0190.js",
+    "main.js": "/ark-connections/static/js/main.ad07ea8d.js",
     "static/js/787.93618544.chunk.js": "/ark-connections/static/js/787.93618544.chunk.js",
     "static/media/InriaSans-Regular.woff2": "/ark-connections/static/media/InriaSans-Regular.561f614d2e58de61fe1b.woff2",
     "index.html": "/ark-connections/index.html",
     "main.c0274368.css.map": "/ark-connections/static/css/main.c0274368.css.map",
-    "main.dbcf0190.js.map": "/ark-connections/static/js/main.dbcf0190.js.map",
+    "main.ad07ea8d.js.map": "/ark-connections/static/js/main.ad07ea8d.js.map",
     "787.93618544.chunk.js.map": "/ark-connections/static/js/787.93618544.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c0274368.css",
-    "static/js/main.dbcf0190.js"
+    "static/js/main.ad07ea8d.js"
   ]
 }
