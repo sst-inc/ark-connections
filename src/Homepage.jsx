@@ -213,7 +213,8 @@ function Homepage() {
             </div>
             <footer>Copyright © Arklink Solutions 2023</footer>
             <div class="w-full text-center bg-[#D9D9D9] p-2 md:p-3 text-xs md:text-sm">
-                <p>Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing, Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram</p
+                <p>Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing, Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram
+                </p>
             </div>
         </div>
     );
