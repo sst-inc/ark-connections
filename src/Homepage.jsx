@@ -10,6 +10,7 @@ import {
     onAuthStateChanged,
     signInWithPopup,
 } from "firebase/auth";
+import { user } from "./Profile.jsx"
 
 function Homepage() {
     // TODO: Add SDKs for Firebase products that you want to use
@@ -36,6 +37,8 @@ function Homepage() {
     onAuthStateChanged(auth, (user) => {
         console.log("You are logged in as", user);
     });
+
+    console.log(user)
 
     return (
         <div>

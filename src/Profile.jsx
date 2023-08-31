@@ -4,6 +4,8 @@ import "./assets/css/style.css";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup } from "firebase/auth";
+export let user = ""
+
 
 function Profile() {
     const firebaseConfig = {
@@ -19,17 +21,26 @@ function Profile() {
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
 
-    function userLogin(){
+    let userLogin = () => {
         signInWithPopup(auth, new GoogleAuthProvider())
         .then(result=>{
-            const user = result.user;
-            document.getElementById("user-id").replaceWith(user.displayName);
+            user = result.user;
+            console.log(typeof user)
         });
+    }
+
+    let loadSaves = () => {
+        console.log(user)
+        if (user !== NaN) {
+            document.getElementById("user-id").replaceWith(user.displayName);
+        }
     }
 
     onAuthStateChanged(auth, user =>{
         console.log('You are logged in as', user);
     });
+
+    loadSaves();
 
     return (
         <>
@@ -92,7 +103,7 @@ function Profile() {
         <br/>
         <p id="user-id">Alistair Tan <i className="fas fa-pen" id="edit-name"></i></p>
         <br/>
-        <button onClick={userLogin()} className="white-text-orange-banner" style={{width:"30%"}}> 
+        <button onClick={() => userLogin()} className="white-text-orange-banner" style={{width:"30%"}}> 
         Sign In <span className="fab fa-google"></span>
         </button>
         <footer>Copyright © Arklink Solutions 2023</footer>
