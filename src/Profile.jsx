@@ -32,15 +32,16 @@ function Profile() {
     let loadSaves = () => {
         console.log(user)
         if (user !== NaN) {
-            document.getElementById("user-id").replaceWith(user.displayName);
+        document.getElementById("user-id").innerHTML = user.displayName;
+        document.getElementById("pfp").style.color = "green";
+        document.getElementById("signBtn").style.display="none";
         }
     }
 
     onAuthStateChanged(auth, user =>{
         console.log('You are logged in as', user);
+        loadSaves();
     });
-
-    loadSaves();
 
     return (
         <>
@@ -99,11 +100,11 @@ function Profile() {
             </div>
         </div>
         
-        <i className="fas fa-user-alt" id="user-profile"></i>
+        <div className="pop-up-flex" style={{fontSize:"20vw"}}><i className="fas fa-user-alt"id="pfp" ></i></div>
         <br/>
-        <p id="user-id">Alistair Tan <i className="fas fa-pen" id="edit-name"></i></p>
+        <p id="user-id" className="pop-up-flex">Alistair Tan <i className="fas fa-pen" id="edit-name"></i></p>
         <br/>
-        <button onClick={() => userLogin()} className="white-text-orange-banner" style={{width:"30%"}}> 
+        <button onClick={() => userLogin()} id="signBtn" className="pop-up-flex btn-orange" style={{width:"30%",fontSize:"7vw", marginLeft:"33vw"}}> 
         Sign In <span className="fab fa-google"></span>
         </button>
         <footer>Copyright © Arklink Solutions 2023</footer>
