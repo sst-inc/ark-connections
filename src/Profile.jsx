@@ -30,17 +30,19 @@ function Profile() {
     }
 
     let loadSaves = () => {
-        console.log(user)
-        if (user !== NaN) {
-        document.getElementById("user-id").innerHTML = user.displayName;
-        document.getElementById("pfp").style.color = "green";
-        document.getElementById("signBtn").style.display="none";
-        }
+        console.log(user);
     }
 
     onAuthStateChanged(auth, user =>{
         console.log('You are logged in as', user);
         loadSaves();
+        if (user !== NaN) {
+            document.getElementById("user-id").innerHTML = user.displayName;
+            document.getElementById("pfp").style.color = "green";
+            document.getElementById("signBtn").style.display="none";
+        }else{
+            return undefined;
+        }
     });
 
     return (
