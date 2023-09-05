@@ -20,28 +20,34 @@ function Profile() {
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
+    var user = auth.currentUser;
 
     let userLogin = () => {
         signInWithPopup(auth, new GoogleAuthProvider())
         .then(result=>{
             user = result.user;
             console.log(typeof user)
+            loadSaves();
         });
     }
 
     let loadSaves = () => {
         console.log(user);
-    }
-
-    onAuthStateChanged(auth, user =>{
-        console.log('You are logged in as', user);
-        loadSaves();
-        if (user !== NaN) {
+        if (user !== null) {
             document.getElementById("user-id").innerHTML = user.displayName;
             document.getElementById("pfp").style.color = "green";
             document.getElementById("signBtn").style.display="none";
         }else{
             return undefined;
+        }
+    }
+
+    onAuthStateChanged(auth, user =>{
+        if (user){
+        console.log('You are logged in as', user);
+        loadSaves();}
+        else{
+            document.getElementById("user-id").innerHTML = "Please Sign in";
         }
     });
 
