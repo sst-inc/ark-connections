@@ -1,22 +1,65 @@
 import React from "react";
 import { useState } from "react";
+import { getDatabase, ref, set, onValue} from "firebase/database";
+import { getAuth} from "firebase/auth";
+import { initializeApp } from "firebase/app";
 import "./assets/ex_libs/bootstrap_4/bootstrap.css";
 import "./assets/css/style.css";
 
-export var finalData = [0, 0, 0, 0, 0]
-export var quizzed = false
+const firebaseConfig = {
+    apiKey: "AIzaSyC3wDTEFEoo1A0vwrJSPFh6h2erpic8RZ8",
+    authDomain: "arklink-connections.firebaseapp.com",
+    projectId: "arklink-connections",
+    storageBucket: "arklink-connections.appspot.com",
+    messagingSenderId: "892713028702",
+    appId: "1:892713028702:web:7cc993d8ee7b7275ff38cf",
+    measurementId: "G-63H4JPJSR0"
+    };
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+export var finalData = [0, 0, 0, 0, 0];
+export var quizzed = false;
+
+const auth = getAuth(app);
+export var user = auth.currentUser;
+
+if (user !== null){
+var userName = user.displayName;
+var userEmail = user.email;
+var userPfp = user.photoURL;
+}
 
 function Quiz() {
     
     const [currentQuestionIndex, updateQnIndex] = useState(0);
 
+    function writeUserData(userID, userName, userPfp, userEmail, finalData, quizzed){
+        const db = getDatabase();
+        const reference = ref(db, 'users/' + userID);
+
+        set(reference, {
+            username: userName,
+            email: userEmail,
+            pfp: userPfp,
+            surveyData: finalData,
+            quiz: quizzed
+        });
+
+    }
+
     let changeQuestionIndex = (changed, oldIndex, result) => {
         if (currentQuestionIndex + 1 === data.length && changed > 0) {
             finalData[oldIndex] = result
-            if (confirm("Attention: your quiz results will be saved and your progress will be reset.")) {
+            if (confirm("Attention: your quiz results will be saved to your gmail account if signed in")) {
                 quizzed = true;
                 window.location = '#/results'
                 updateQnIndex(0)
+                if(user !== null){
+                    writeUserData(user.uid,userName,userPfp,userEmail,finalData,true)
+                }else{
+                    return undefined
+                }
             }
         } else if (currentQuestionIndex === 0 && changed < 0) {
             finalData[oldIndex] = finalData[oldIndex]
@@ -56,6 +99,13 @@ function Quiz() {
             "optn1Result": "teach",
             "optn2Result": "no teach"
         },
+        {
+            "question": "Do you regard yourself as an introvert or extrovert?",
+            "optn1": "Introvert...",
+            "optn2": "Extrovert definitely!",
+            "optn1Result": "regard yourself as an introvert",
+            "optn2Result": "regard yourself as more outgoing!"
+        }
     
     ]
         return (
@@ -123,7 +173,7 @@ function Quiz() {
                 {(finalData[currentQuestionIndex] != 0) ?
                     <h1>For this question you answered {finalData[currentQuestionIndex]}</h1>
                     :
-                    <h1>You have not answered this question yet</h1>
+                    <h1>Remember to answer as sincerely as possible!</h1>
                 }
                 <div className="pop-up-flex">
                     <button

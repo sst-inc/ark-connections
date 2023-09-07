@@ -2,7 +2,6 @@ import React from "react";
 import "./assets/ex_libs/bootstrap_4/bootstrap.css";
 import "./assets/css/style.css";
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup } from "firebase/auth";
 export let user = ""
 
@@ -35,7 +34,9 @@ function Profile() {
         console.log(user);
         if (user !== null) {
             document.getElementById("user-id").innerHTML = user.displayName;
-            document.getElementById("pfp").style.color = "green";
+            document.getElementById("profilePic").src = user.photoURL;
+            document.getElementById("profilePic").style.display = "block";           
+            document.getElementById("pfp").style.display = "none";
             document.getElementById("signBtn").style.display="none";
         }else{
             return undefined;
@@ -109,6 +110,7 @@ function Profile() {
         </div>
         
         <div className="pop-up-flex" style={{fontSize:"20vw"}}><i className="fas fa-user-alt"id="pfp" ></i></div>
+        <img className="pop-up-flex" width="200" height="200" style={{display:"none", justifyContent:"space-around"}}id="profilePic"></img>
         <br/>
         <p id="user-id" className="pop-up-flex">Alistair Tan <i className="fas fa-pen" id="edit-name"></i></p>
         <br/>

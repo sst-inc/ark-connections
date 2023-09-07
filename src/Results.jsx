@@ -1,7 +1,37 @@
 import React from "react";
 import "./assets/ex_libs/bootstrap_4/bootstrap.css";
 import "./assets/css/style.css";
-import { finalData, quizzed } from "./Quiz.jsx"
+import { finalData, quizzed, user} from "./Quiz.jsx";
+import { getAuth} from "firebase/auth";
+import { getDatabase, ref, onValue} from "firebase/database";
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyC3wDTEFEoo1A0vwrJSPFh6h2erpic8RZ8",
+    authDomain: "arklink-connections.firebaseapp.com",
+    projectId: "arklink-connections",
+    storageBucket: "arklink-connections.appspot.com",
+    messagingSenderId: "892713028702",
+    appId: "1:892713028702:web:7cc993d8ee7b7275ff38cf",
+    measurementId: "G-63H4JPJSR0"
+    };
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase();
+
+if(user !== null){
+    const quizRef = ref(db, 'users/' + user.uid + '/quiz')
+    const dataRef = ref(db, 'users/' + user.uid + '/finalData')
+    onValue(quizRef, (snapshot) =>{
+        quizzed = snapshot.val();
+    })
+    if (quizzed === true){
+        onValue(dataRef, (snapshot)=>{
+            finalData = snapshot.val()
+        })
+    }
+}
 
 function Results() {
     if (quizzed === true) {
@@ -76,13 +106,13 @@ function Results() {
                             className="container container-orange pop-up d-flex flex-column container-results"
                             style={{ justifyContent: "space-around" }}
                         >
-                            <p>1. You prefer working with {finalData[0]}</p>
+                            <p>1. You prefer working with {finalData[0]}!</p>
                         </div>
                         <div
                             className="container container-purple pop-up d-flex flex-column container-results"
                             style={{ justifyContent: "space-around" }}
                         >
-                            <p>3. You prefer {finalData[2]}</p>
+                            <p>3. You prefer {finalData[2]} and {finalData[3]}!</p>
                         </div>
                     </div>
                     <div className="pop-up-flex-col">
@@ -90,13 +120,13 @@ function Results() {
                             className="container container-purple pop-up d-flex flex-column container-results"
                             style={{ justifyContent: "space-around" }}
                         >
-                            <p>2. You prefer helping the {finalData[1]} </p>
+                            <p>2. You prefer helping the {finalData[1]}!</p>
                         </div>
                         <div
                             className="container container-orange pop-up d-flex flex-column container-results"
                             style={{ justifyContent: "space-around" }}
                         >
-                            <p>4. </p>
+                            <p>4. You prefer to {finalData[4]}!</p>
                         </div>
                     </div>
                 </div>
@@ -128,7 +158,8 @@ function Results() {
                 <footer>Copyright © Arklink Solutions 2023</footer>
             </div>
         );
-    } else {
+    } 
+    else {
         return (
             <div>
                 <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
