@@ -1,4 +1,5 @@
 import React from "react";
+import {useState} from "react";
 import "./assets/ex_libs/bootstrap_4/bootstrap.css";
 import "./assets/css/style.css";
 // Import the functions you need from the SDKs you need
@@ -40,6 +41,16 @@ function Homepage() {
 
     console.log(user)
 
+        const [Modal, setModal] = useState(false);
+        const toggleModal = () =>{
+            setModal(!Modal)
+        }
+        if(Modal){
+            document.body.classList.add('active-Modal')
+        } else{
+            document.body.classList.remove('active-Modal')
+        }
+    
     return (
         <div>
             <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
@@ -145,15 +156,33 @@ function Homepage() {
                                 width: "100%",
                             }}
                         >
-                            <button className="btn btn-lg">
-                                <a
-                                    href="https://rayofhope.sg/view-all/"
-                                    target="_blank"
-                                >
-                                    <p className="btn-cta-text">
+                            <button onClick={toggleModal} className="btn btn-lg">
+                            <p className="btn-cta-text">
                                         NEEDS HELP <strong>ASAP</strong>
                                     </p>
-                                </a>
+                                    {Modal && (
+                                        <div className="Modal">
+                                            <div onClick={toggleModal} className="overlay"></div>
+                                            <div className="modalcontent">
+                                            <strong className="BLOB">Ray Of Hope</strong>
+                                                <button className="CloseModal" onClick={toggleModal}>
+                                                    CLOSE
+                                                </button>
+                                                <div id="WTD">insert what the organisation does in our own short breif way</div>
+                                                <br/>
+                                                <div>
+                                                    <button className="BLOBY">
+                                                        <a href="#/quiz">
+                                                            <p className="btn-cta-text">Take the quiz</p>
+                                                        </a>
+                                                    </button>
+                                                    <button className="BLOBY">
+                                                        <a href="https://rayofhope.sg/view-all/" target="_blank">Find out more</a>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
                                 <i class="fa-regular fa-handshake pop-up-icon"></i>
@@ -200,12 +229,33 @@ function Homepage() {
                                 width: "100%",
                             }}
                         >
-                            <button className="btn btn-lg">
-                                <a href="https://sincsg.com" target="_blank">
+                            <button onClick={toggleModal} className="btn btn-lg">
                                     <p className="btn-cta-text">
                                         NEEDS HELP <strong>ASAP</strong>
                                     </p>
-                                </a>
+                                    {Modal && (
+                                        <div className="Modal">
+                                            <div onClick={toggleModal} className="overlay"></div>
+                                            <div className="modalcontent">
+                                                <strong className="BLOB">Sinc Sg</strong>
+                                                <button className="CloseModal" onClick={toggleModal}>
+                                                    CLOSE
+                                                </button>
+                                                <div id="WTD">insert what the organisation does in our own short breif way</div>
+                                                <br/>
+                                                <div>
+                                                    <button className="BLOBY">
+                                                        <a href="#/quiz">
+                                                            <p className="btn-cta-text">Take the quiz</p>
+                                                        </a>
+                                                    </button>
+                                                    <button className="BLOBY">
+                                                        <a href="https://sincsg.com" target="_blank">Find out more</a>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
                                 <i class="fa-regular fa-handshake pop-up-icon"></i>
