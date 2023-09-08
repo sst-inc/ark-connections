@@ -40,15 +40,23 @@ function Homepage() {
     });
 
     console.log(user)
-
-        const [Modal, setModal] = useState(false);
-        const toggleModal = () =>{
-            setModal(!Modal)
+        const [ROHModal, setROHModal] = useState(false);
+        const [sincModal, setSincModal] = useState(false);
+        
+        let toggleModal = (modal) =>{
+            if(modal==="sincModal"){setSincModal(!sincModal)}
+            if(modal==="ROHModal"){setROHModal(!ROHModal)}
         }
-        if(Modal){
-            document.body.classList.add('active-Modal')
+
+        if(sincModal){
+            document.body.classList.add('active-sincModal')
         } else{
-            document.body.classList.remove('active-Modal')
+            document.body.classList.remove('active-sincModal')
+        }
+        if(ROHModal){
+            document.body.classList.add('active-ROHModal')
+        } else{
+            document.body.classList.remove('active-ROHModal')
         }
     
     return (
@@ -156,21 +164,21 @@ function Homepage() {
                                 width: "100%",
                             }}
                         >
-                            <button onClick={toggleModal} className="btn btn-lg">
+                            <button onClick={()=>toggleModal("ROHModal")} className="btn btn-lg">
                             <p className="btn-cta-text">
                                         NEEDS HELP <strong>ASAP</strong>
                                     </p>
-                                    {Modal && (
+                                    {ROHModal && (
                                         <div className="Modal">
-                                            <div onClick={toggleModal} className="overlay"></div>
+                                            <div onClick={()=>toggleModal("ROHModal")} className="overlay"></div>
                                             <div className="modalcontent">
                                             <strong className="BLOB">Ray Of Hope</strong>
-                                                <button className="CloseModal" onClick={toggleModal}>
+                                                <button className="CloseModal" onClick={()=>toggleModal("ROHModal")}>
                                                     CLOSE
                                                 </button>
                                                 <div id="WTD">They are a crowdfunding charity that helps people who have fallen through the cracks of our society by Empowers people to help one another – to give hope to those who need it most.</div>
                                                 <br/>
-                                                <div>
+                                                <div className="d-flex flex-row" style={{justifyContent: "space-around"}}>
                                                     <button className="BLOBY">
                                                         <a href="#/quiz">
                                                             <p className="btn-cta-text">Take the quiz</p>
@@ -229,21 +237,21 @@ function Homepage() {
                                 width: "100%",
                             }}
                         >
-                            <button onClick={toggleModal} className="btn btn-lg">
+                            <button onClick={()=>toggleModal("sincModal")} className="btn btn-lg">
                                     <p className="btn-cta-text">
                                         NEEDS HELP <strong>ASAP</strong>
                                     </p>
-                                    {Modal && (
+                                    {sincModal && (
                                         <div className="Modal">
-                                            <div onClick={toggleModal} className="overlay"></div>
+                                            <div onClick={()=>toggleModal("sincModal")} className="overlay"></div>
                                             <div className="modalcontent">
                                                 <strong className="BLOB">Sinc Sg</strong>
-                                                <button className="CloseModal" onClick={toggleModal}>
+                                                <button className="CloseModal" onClick={()=>toggleModal("sincModal")}>
                                                     CLOSE
                                                 </button>
-                                                <div id="WTD">insert what the organisation does in our own short breif way</div>
+                                                <div id="WTD">Teaches children the basic of web development</div>
                                                 <br/>
-                                                <div>
+                                                <div className="d-flex flex-row" style={{justifyContent: "space-around"}}>
                                                     <button className="BLOBY">
                                                         <a href="#/quiz">
                                                             <p className="btn-cta-text">Take the quiz</p>

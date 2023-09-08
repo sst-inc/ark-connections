@@ -445,3 +445,8 @@ body.active-modal {
       transform: rotate(360deg);
     }
   }
+#user-id{
+    font-size: 5vw;
+}
+
+/*#endregion*/
