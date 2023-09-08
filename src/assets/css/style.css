@@ -6,7 +6,7 @@
     font-style: light;
 }
 
-:root{
+:root {
     --lighterBlue: #e4e9f5;
     --lightBlue: #d3ddf6;
     --deepBlue: #4d4b72;
@@ -27,7 +27,7 @@
     --mediumGreen: #44d46b;
     --darkGreen: #1e873a;
 
-    --floating-animation-time: 5s; 
+    --floating-animation-time: 5s;
 }
 
 * {
@@ -42,25 +42,30 @@ a {
 p {
     margin: 0;
     padding: 10px;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 /*#endregion*/
 /*#region Navbar*/
 nav ul {
     list-style-type: none;
-}  
+}
 nav ul li {
     display: inline;
     margin-right: 20px;
 }
 
-nav, ul, li, a {
+nav,
+ul,
+li,
+a {
     text-decoration: none;
     color: #333;
 }
 
 .logo {
-    width:15vw; 
-    height:15vw;
+    width: 15vw;
+    height: 15vw;
     max-height: 40px;
     max-width: 40px;
 }
@@ -69,32 +74,39 @@ nav, ul, li, a {
     justify-content: right;
 }
 
-
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 800px) {
     .navbar-nav-text-heading {
         font-size: inherit;
         padding: 5px;
     }
 }
 
-@media only screen and (max-width: 800px){
-    .navbar-nav-text-heading{
+@media only screen and (max-width: 800px) {
+    .navbar-nav-text-heading {
         font-size: 0px !important;
         padding: 5px;
     }
 }
 
 @keyframes shimmer {
-    0%   {background-position: 0%;}
-    100%   {background-position: 100%;}
-
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
 }
 
 body {
     padding-top: 66px !important;
     animation: 5s shimmer linear infinite;
     padding: 2rem;
-    background-image: linear-gradient(var(--softPurple), var(--gentleOrange), #d3ddf6, var(--deepBlue));
+    background-image: linear-gradient(
+        var(--softPurple),
+        var(--gentleOrange),
+        #d3ddf6,
+        var(--deepBlue)
+    );
     background-size: 400%;
     min-height: 100vh !important;
     height: fit-content;
@@ -117,19 +129,48 @@ strong {
 /*#region properCssStyling*/
 
 @keyframes fade-in {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes floating {
-    0%  {top: 0px}
-    50%  {top: 1vw}
-    100%  {top: 0px}
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: 1vw;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes floating-modal {
+    0% {
+        top: 48%;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 48%;
+    }
 }
 
 @keyframes pop-ups {
-    0%   {top:5vw; opacity: 0; box-shadow: none;}
-    100% {top:0px; opacity: 1;}
+    0% {
+        top: 5vw;
+        opacity: 0;
+        box-shadow: none;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
 }
 
 .pop-up-flex {
@@ -153,7 +194,7 @@ strong {
     h1 {
         font-size: 1.75vw;
     }
-    
+
     .btn-quiz {
         width: 35vw !important;
         height: 25vw;
@@ -171,7 +212,7 @@ strong {
         animation-name: pop-ups;
         animation-duration: 4s;
         animation-delay: 2s;
-        box-shadow: 4px 4px rgba(0,0,0,.25)
+        box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     .pop-up-flex {
@@ -179,14 +220,14 @@ strong {
     }
 
     .pop-up > p {
-        font-size: 1.5vw
+        font-size: 1.5vw;
     }
 
     .startText p {
         font-size: 2vw;
         line-height: 1;
     }
-    
+
     quoteText {
         font-size: 3vw;
         line-height: 1;
@@ -205,7 +246,6 @@ strong {
         font-size: 1vw;
     }
 }
-
 
 @media only screen and (max-width: 500px) {
     h1 {
@@ -226,7 +266,7 @@ strong {
         position: relative;
         animation-name: pop-ups;
         animation-duration: 4s;
-        animation-delay: 2s
+        animation-delay: 2s;
     }
 
     .pop-up-flex {
@@ -234,14 +274,14 @@ strong {
     }
 
     .pop-up > p {
-        font-size: 4vw
+        font-size: 4vw;
     }
 
     .startText p {
         font-size: 4vw;
         line-height: 1;
     }
-    
+
     quoteText {
         font-size: 6vw;
         line-height: 1;
@@ -269,17 +309,21 @@ strong {
 
 .container-orange * .btn {
     background-color: var(--risingOrange);
-    box-shadow: 4px 4px rgba(0,0,0,.25)
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .container-orange * .btn:hover {
     background-color: var(--mediumOrange);
-    box-shadow: 0px 0px rgba(0,0,0,.25)
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
 }
 
 .container-orange * .btn:active {
     background-color: var(--darkOrange);
-    box-shadow: 0px 0px rgba(0,0,0,.25);
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container-orange * .modalcontent {
+    background-color: var(--notSoGentleOrange);
 }
 
 .container-purple {
@@ -290,17 +334,21 @@ strong {
 
 .container-purple * .btn {
     background-color: var(--risingPurple);
-    box-shadow: 4px 4px rgba(0,0,0,.25);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .container-purple * .btn:hover {
     background-color: var(--mediumPurple);
-    box-shadow: 0px 0px rgba(0,0,0,.25);
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
 }
 
 .container-purple * .btn:active {
     background-color: var(--darkPurple);
-    box-shadow: 0px 0px rgba(0,0,0,.25)
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container-purple * .modalcontent {
+    background-color: var(--softPurple);
 }
 
 .container-green {
@@ -311,18 +359,18 @@ strong {
 
 .container-green * .btn {
     background-color: var(--risingGreen);
-    box-shadow: 4px 4px rgba(0,0,0,.25)
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .container-green * .btn:hover {
     background-color: var(--mediumGreen);
-    box-shadow: 0px 0px rgba(0,0,0,.25);
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
     animation: 1s shadow-down ease;
 }
 
 .container-green * .btn:active {
     background-color: var(--darkGreen);
-    box-shadow: 0px 0px rgba(0,0,0,.25)
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
 }
 
 .btn {
@@ -347,49 +395,43 @@ footer {
 .btn-orange {
     background-color: var(--notSoGentleOrange);
     border-radius: 25px;
-    box-shadow: 4px 4px rgba(0,0,0,.25)
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .btn-orange:hover {
     background-color: var(--risingOrange);
-    box-shadow: 0px 0px rgba(0,0,0,.25)
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
 }
 
 .btn-orange:active {
     background-color: var(--mediumOrange);
-    box-shadow: 0px 0px rgba(0,0,0,.25);
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
 }
 
 .btn-purple {
     background-color: var(--softPurple);
     border-radius: 25px;
-    box-shadow: 4px 4px rgba(0,0,0,.25);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .btn-purple:hover {
     background-color: var(--risingPurple);
-    box-shadow: 0px 0px rgba(0,0,0,.25);
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
 }
 
 .btn-purple:active {
     background-color: var(--mediumPurple);
-    box-shadow: 0px 0px rgba(0,0,0,.25)
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
 }
 
 /*#endregion*/
 
 body.active-modal {
     overflow-y: hidden;
-  }
-  
-  .btn-modal {
-    padding: 10px 20px;
-    display: block;
-    margin: 100px auto 0;
-    font-size: 18px;
-  }
-  
-  .Modal, .overlay {
+}
+
+.Modal,
+.overlay {
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -397,36 +439,29 @@ body.active-modal {
     right: 0;
     bottom: 0;
     position: fixed;
-  }
-  
-  .overlay {
-    background: rgba(49,49,49,0.8);
-  }
-  .modalcontent {
+    z-index: 2000;
+    animation: fade-in 500ms linear;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+    z-index: 1999 !important;
+}
+
+.modalcontent {
+    animation: floating-modal 20s infinite;
     position: absolute;
-    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
-    background: linear-gradient(135deg,#e4e9f5,#c39ae6);
     padding: 14px 28px;
-    border-radius: 3px;
+    border-radius: 15px;
     max-width: 600px;
-    min-width: 300px;
-  }
-  .BLOB{
-    font-size: 40px;
-  }
-  
-  .BLOBY{
-    background-color: #ede4f5;
-    border: none;
-    height: 40px;
-    width:150px;
-    font-size: 20px;
-  }
+    width: 80vw;
+    z-index: 2000;
+}
 
-  .CloseModal {
+.CloseModal {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -435,17 +470,9 @@ body.active-modal {
     float: right;
     font-size: 18px;
     font-weight: bold;
-  }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-#user-id{
+}
+
+#user-id {
     font-size: 5vw;
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from "react";
+import { useState } from "react";
 import "./assets/ex_libs/bootstrap_4/bootstrap.css";
 import "./assets/css/style.css";
 // Import the functions you need from the SDKs you need
@@ -11,7 +11,7 @@ import {
     onAuthStateChanged,
     signInWithPopup,
 } from "firebase/auth";
-import { user } from "./Profile.jsx"
+import { user } from "./Profile.jsx";
 
 function Homepage() {
     // TODO: Add SDKs for Firebase products that you want to use
@@ -39,32 +39,36 @@ function Homepage() {
         console.log("You are logged in as", user);
     });
 
-    console.log(user)
-        const [ROHModal, setROHModal] = useState(false);
-        const [sincModal, setSincModal] = useState(false);
-        
-        let toggleModal = (modal) =>{
-            if(modal==="sincModal"){setSincModal(!sincModal)}
-            if(modal==="ROHModal"){setROHModal(!ROHModal)}
-        }
+    console.log(user);
+    const [ROHModal, setROHModal] = useState(false);
+    const [sincModal, setSincModal] = useState(false);
 
-        if(sincModal){
-            document.body.classList.add('active-sincModal')
-        } else{
-            document.body.classList.remove('active-sincModal')
+    let toggleModal = (modal) => {
+        if (modal === "sincModal") {
+            setSincModal(!sincModal);
         }
-        if(ROHModal){
-            document.body.classList.add('active-ROHModal')
-        } else{
-            document.body.classList.remove('active-ROHModal')
+        if (modal === "ROHModal") {
+            setROHModal(!ROHModal);
         }
-    
+    };
+
+    if (sincModal) {
+        document.body.classList.add("active-sincModal");
+    } else {
+        document.body.classList.remove("active-sincModal");
+    }
+    if (ROHModal) {
+        document.body.classList.add("active-ROHModal");
+    } else {
+        document.body.classList.remove("active-ROHModal");
+    }
+
     return (
         <div>
             <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
-            <div id='navbar-container'>
+            <div id="navbar-container">
                 <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                     <a className="navbar-brand" href="#/">
                         <img
@@ -134,7 +138,9 @@ function Homepage() {
                         className="container container-orange pop-up d-flex flex-column"
                         style={{ justifyContent: "space-around" }}
                     >
-                        <p>Explore some organisations that might need help ASAP</p>
+                        <p>
+                            Explore some organisations that might need help ASAP
+                        </p>
                         <div
                             className="d-flex flex-row"
                             style={{
@@ -164,33 +170,61 @@ function Homepage() {
                                 width: "100%",
                             }}
                         >
-                            <button onClick={()=>toggleModal("ROHModal")} className="btn btn-lg">
-                            <p className="btn-cta-text">
-                                        NEEDS HELP <strong>ASAP</strong>
-                                    </p>
-                                    {ROHModal && (
-                                        <div className="Modal">
-                                            <div onClick={()=>toggleModal("ROHModal")} className="overlay"></div>
-                                            <div className="modalcontent">
-                                            <strong className="BLOB">Ray Of Hope</strong>
-                                                <button className="CloseModal" onClick={()=>toggleModal("ROHModal")}>
-                                                    CLOSE
+                            <button
+                                onClick={() => toggleModal("ROHModal")}
+                                className="btn btn-lg"
+                            >
+                                <p className="btn-cta-text">
+                                    NEEDS HELP <strong>ASAP</strong>
+                                </p>
+                                {ROHModal && (
+                                    <div className="Modal">
+                                        <div
+                                            onClick={() =>
+                                                toggleModal("ROHModal")
+                                            }
+                                            className="overlay"
+                                        ></div>
+                                        <div className="modalcontent">
+                                            <p className="h2">Ray of Hope</p>
+                                            <button
+                                                className="CloseModal btn btn-danger"
+                                                onClick={() =>
+                                                    toggleModal("ROHModal")
+                                                }
+                                            >
+                                                X
+                                            </button>
+                                            <p>
+                                                They are a crowdfunding charity
+                                                that helps people who have
+                                                fallen through the cracks of our
+                                                society by Empowers people to
+                                                help one another - to give hope
+                                                to those who need it most.
+                                            </p>
+                                            <br />
+                                            <div
+                                                className="d-flex flex-row"
+                                                style={{
+                                                    justifyContent:
+                                                        "space-around",
+                                                }}
+                                            >
+                                                <button className="btn btn-lg">
+                                                    <a href="#/quiz">
+                                                        <p className="btn-cta-text">Take the quiz</p>
+                                                    </a>
                                                 </button>
-                                                <div id="WTD">They are a crowdfunding charity that helps people who have fallen through the cracks of our society by Empowers people to help one another – to give hope to those who need it most.</div>
-                                                <br/>
-                                                <div className="d-flex flex-row" style={{justifyContent: "space-around"}}>
-                                                    <button className="BLOBY">
-                                                        <a href="#/quiz">
-                                                            <p className="btn-cta-text">Take the quiz</p>
-                                                        </a>
-                                                    </button>
-                                                    <button className="BLOBY">
-                                                        <a href="https://rayofhope.sg/view-all/" target="_blank">Find out more</a>
-                                                    </button>
-                                                </div>
+                                                <button className="btn btn-lg">
+                                                    <a href="https://rayofhope.sg/view-all/" target="_blank">
+                                                        <p className="btn-cta-text">Find out more!</p>
+                                                    </a>
+                                                </button>
                                             </div>
                                         </div>
-                                    )}
+                                    </div>
+                                )}
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
                                 <i class="fa-regular fa-handshake pop-up-icon"></i>
@@ -237,33 +271,57 @@ function Homepage() {
                                 width: "100%",
                             }}
                         >
-                            <button onClick={()=>toggleModal("sincModal")} className="btn btn-lg">
-                                    <p className="btn-cta-text">
-                                        NEEDS HELP <strong>ASAP</strong>
-                                    </p>
-                                    {sincModal && (
-                                        <div className="Modal">
-                                            <div onClick={()=>toggleModal("sincModal")} className="overlay"></div>
-                                            <div className="modalcontent">
-                                                <strong className="BLOB">Sinc Sg</strong>
-                                                <button className="CloseModal" onClick={()=>toggleModal("sincModal")}>
-                                                    CLOSE
+                            <button
+                                onClick={() => toggleModal("sincModal")}
+                                className="btn btn-lg"
+                            >
+                                <p className="btn-cta-text">
+                                    NEEDS HELP <strong>ASAP</strong>
+                                </p>
+                                {sincModal && (
+                                    <div className="Modal">
+                                        <div
+                                            onClick={() =>
+                                                toggleModal("sincModal")
+                                            }
+                                            className="overlay"
+                                        ></div>
+                                        <div className="modalcontent">
+                                            <p className="h2">Sinc Sg</p>
+                                            <button
+                                                className="CloseModal btn btn-danger"
+                                                onClick={() =>
+                                                    toggleModal("sincModal")
+                                                }
+                                            >
+                                                X
+                                            </button>
+                                            <p>
+                                                Teaches children the basic of
+                                                web development
+                                            </p>
+                                            <br />
+                                            <div
+                                                className="d-flex flex-row"
+                                                style={{
+                                                    justifyContent:
+                                                        "space-around",
+                                                }}
+                                            >
+                                                <button className="btn btn-lg">
+                                                    <a href="#/quiz">
+                                                        <p className="btn-cta-text">Take the quiz</p>
+                                                    </a>
                                                 </button>
-                                                <div id="WTD">Teaches children the basic of web development</div>
-                                                <br/>
-                                                <div className="d-flex flex-row" style={{justifyContent: "space-around"}}>
-                                                    <button className="BLOBY">
-                                                        <a href="#/quiz">
-                                                            <p className="btn-cta-text">Take the quiz</p>
-                                                        </a>
-                                                    </button>
-                                                    <button className="BLOBY">
-                                                        <a href="https://sincsg.com" target="_blank">Find out more</a>
-                                                    </button>
-                                                </div>
+                                                <button className="btn btn-lg">
+                                                    <a href="https://sincsg.com" target="_blank">
+                                                        <p className="btn-cta-text">Find out more!</p>
+                                                    </a>
+                                                </button>
                                             </div>
                                         </div>
-                                    )}
+                                    </div>
+                                )}
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
                                 <i class="fa-regular fa-handshake pop-up-icon"></i>
@@ -272,7 +330,10 @@ function Homepage() {
                     </div>
                 </div>
             </div>
-            <footer>Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing, Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram</footer>
+            <footer>
+                Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
+                Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram
+            </footer>
         </div>
     );
 }

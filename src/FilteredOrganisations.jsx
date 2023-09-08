@@ -1,41 +1,60 @@
 import React from "react";
 import "./assets/ex_libs/bootstrap_4/bootstrap.css";
 import "./assets/css/style.css";
-import { finalData } from './Quiz.jsx'
+import { finalData } from "./Quiz.jsx";
 
 function FilteredOrganisations() {
-
     const overAllOrganisations = {
-        "RayOfHope": {"name": "Ray Of Hope", "url": "http://rayofhope.com", "filter": ["humans", "elderly", "caretaking"]},
-        "SincSG" : {"name": "Sinc", "url": "http://sincsg.com", "filter": ["humans", "teach"]},
-        "SPCA": {"name": "Society for the Prevention of Cruelty to Animals", "url": "https://spca.org.sg", "filter": ["animals", "environment", "caretaking"]},
-        "NCSS": {"name": "National Council of Social Services", "url": "https://www.ncss.gov.sg/volunteer", "filter": ["humans", "animals"]}
-    }
+        RayOfHope: {
+            name: "Ray Of Hope",
+            url: "http://rayofhope.com",
+            filter: ["humans", "elderly", "caretaking"],
+        },
+        SincSG: {
+            name: "Sinc",
+            url: "http://sincsg.com",
+            filter: ["humans", "teach"],
+        },
+        SPCA: {
+            name: "Society for the Prevention of Cruelty to Animals",
+            url: "https://spca.org.sg",
+            filter: ["animals", "environment", "caretaking"],
+        },
+        NCSS: {
+            name: "National Council of Social Services",
+            url: "https://www.ncss.gov.sg/volunteer",
+            filter: ["humans", "animals"],
+        },
+    };
 
-    let goodness = {}
-    let sortedOrg = {}
-    
+    let goodness = {};
+    let sortedOrg = {};
+
     let filter = (filters) => {
-        for (let key in overAllOrganisations) { 
+        for (let key in overAllOrganisations) {
             for (let filterKind in finalData) {
-                if (overAllOrganisations[key].filter.includes(finalData[filterKind])) {
+                if (
+                    overAllOrganisations[key].filter.includes(
+                        finalData[filterKind]
+                    )
+                ) {
                     console.log(key, finalData[filterKind]);
                     if (key in goodness) {
-                        goodness[key] += 1
+                        goodness[key] += 1;
                     } else {
-                        goodness[key] = 1
+                        goodness[key] = 1;
                     }
-                    console.log(goodness)
+                    console.log(goodness);
                 }
             }
         }
-        sortedOrg = Object.keys(goodness).sort(function(a, b) {
+        sortedOrg = Object.keys(goodness).sort(function (a, b) {
             return goodness[b] - goodness[a];
         });
-        console.log(sortedOrg)
-    } 
+        console.log(sortedOrg);
+    };
 
-    filter()
+    filter();
 
     return (
         <div>
@@ -44,7 +63,11 @@ function FilteredOrganisations() {
             <noscript>You need to enable JavaScript to run this app.</noscript>
             <div id="navbar-container">
                 <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
-                    <a className="navbar-brand" href="#/" style={{paddingLeft: "4px", paddingRight: "4px"}}>
+                    <a
+                        className="navbar-brand"
+                        href="#/"
+                        style={{ paddingLeft: "4px", paddingRight: "4px" }}
+                    >
                         <i class="fa-solid fa-arrow-left"></i> Back to home
                     </a>
                     <button
@@ -87,39 +110,58 @@ function FilteredOrganisations() {
             <div className="d-flex flex-row">
                 <div className="startText">
                     <quoteText>
-                        "Happiness is when what you <strong>think</strong>, what you <strong>say</strong>, and what you <strong>do</strong> are in harmony."
+                        "Happiness is when what you <strong>think</strong>, what
+                        you <strong>say</strong>, and what you{" "}
+                        <strong>do</strong> are in harmony."
                     </quoteText>
                     <p>~Mahatma Gandhi</p>
                 </div>
-                <div style={{width: "40%"}}></div>
+                <div style={{ width: "40%" }}></div>
             </div>
-            <h1 className="fade-in-fade-out">We think you'll fit best in these organisations (Sorted from best to Worst): </h1>
+            <h1 className="fade-in-fade-out">
+                We think you'll fit best in these organisations (Sorted from
+                best to Worst):{" "}
+            </h1>
             <div className="pop-up-flex">
-            {sortedOrg.map((organisation, index) => {
-                console.log(organisation)
-                return (
+                {sortedOrg.map((organisation, index) => {
+                    console.log(organisation);
+                    return (
+                        <div
+                            className="container container-purple pop-up d-flex flex-column"
+                            style={{
+                                justifyContent: "space-around",
+                                marginBottom: "4vw",
+                            }}
+                            key={index}
+                        >
+                            <p>
+                                {index + 1}.{" "}
+                                {overAllOrganisations[organisation].name}
+                            </p>
                             <div
-                                className="container container-purple pop-up d-flex flex-column"
-                                style={{ justifyContent: "space-around", marginBottom: "4vw" }}
-                                key={index}
+                                className="d-flex flex-row"
+                                style={{
+                                    justifyContent: "space-between",
+                                    width: "100%",
+                                }}
                             >
-                                <p>{index + 1}. {overAllOrganisations[organisation].name}</p>
-                                <div
-                                    className="d-flex flex-row"
-                                    style={{
-                                        justifyContent: "space-between",
-                                        width: "100%",
-                                    }}
-                                >
                                 <button className="btn btn-lg">
-                                    <a href={overAllOrganisations[organisation].url} target="_blank">
-                                        <p className="btn-cta-text">Right here!</p>
+                                    <a
+                                        href={
+                                            overAllOrganisations[organisation]
+                                                .url
+                                        }
+                                        target="_blank"
+                                    >
+                                        <p className="btn-cta-text">
+                                            Right here!
+                                        </p>
                                     </a>
                                 </button>
+                            </div>
                         </div>
-                    </div>
-                );
-            })}
+                    );
+                })}
             </div>
             <footer>Copyright © Arklink Solutions 2023</footer>
         </div>
