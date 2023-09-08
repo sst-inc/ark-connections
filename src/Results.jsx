@@ -114,14 +114,14 @@ function Results() {
                             className="container container-orange pop-up d-flex flex-column container-results"
                             style={{ justifyContent: "space-around" }}
                         >
-                            <p>1. You prefer working with {finalData[0]}!</p>
+                            <p>1. You prefer working with {finalData[0]}</p>
                         </div>
                         <div
                             className="container container-purple pop-up d-flex flex-column container-results"
                             style={{ justifyContent: "space-around" }}
                         >
                             <p>
-                                3. You prefer {finalData[2]} and {finalData[3]}!
+                                3. You prefer {finalData[2]} and to {finalData[3]}
                             </p>
                         </div>
                     </div>
@@ -130,13 +130,13 @@ function Results() {
                             className="container container-purple pop-up d-flex flex-column container-results"
                             style={{ justifyContent: "space-around" }}
                         >
-                            <p>2. You prefer helping the {finalData[1]}!</p>
+                            <p>2. You prefer helping the {finalData[1]}</p>
                         </div>
                         <div
                             className="container container-orange pop-up d-flex flex-column container-results"
                             style={{ justifyContent: "space-around" }}
                         >
-                            <p>4. You prefer to {finalData[4]}!</p>
+                            <p>4. You regard yourself as an {finalData[4]}</p>
                         </div>
                     </div>
                 </div>
@@ -251,7 +251,8 @@ function Results() {
                         </button>
                     </a>
                 </div>
-                <footer>Copyright © Arklink Solutions 2023</footer>
+                <footer>Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
+                Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram</footer>
             </div>
         );
     }

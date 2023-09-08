@@ -131,7 +131,8 @@ function Organisations() {
                     </div>
                 </div>
             </div>
-            <footer>Copyright © Arklink Solutions 2023</footer>
+            <footer>Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
+                Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram</footer>
         </div>
     );
 }

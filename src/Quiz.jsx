@@ -119,8 +119,8 @@ function Quiz() {
             question: "Do you regard yourself as an introvert or extrovert?",
             optn1: "Introvert...",
             optn2: "Extrovert definitely!",
-            optn1Result: "regard yourself as an introvert",
-            optn2Result: "regard yourself as more outgoing!",
+            optn1Result: "introvert",
+            optn2Result: "extrovert",
         },
     ];
     return (
@@ -245,7 +245,8 @@ function Quiz() {
                     <p className="btn-cta-text">Back</p>
                 </button>
             </div>
-            <footer>Copyright © Arklink Solutions 2023</footer>
+            <footer>Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
+                Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram</footer>
         </div>
     );
 }

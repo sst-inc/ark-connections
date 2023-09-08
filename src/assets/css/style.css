@@ -389,7 +389,7 @@ footer {
 }
 
 .container-results {
-    height: fit-content !important;
+    height: fit-content;
 }
 
 .btn-orange {

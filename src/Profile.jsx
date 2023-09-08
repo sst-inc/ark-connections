@@ -116,20 +116,48 @@ function Profile() {
                 </div>
             </div>
 
-            <div className="pop-up-flex" style={{ fontSize: "20vw" }}>
-                <i className="fas fa-user-alt" id="pfp"></i>
+            <div className="d-flex flex-row">
+                <div className="startText">
+                    <quoteText>
+                        "Knowing yourself is the <strong>beginning</strong> of
+                        all <strong>wisdom.</strong>"
+                    </quoteText>
+                    <p>~Aristotle</p>
+                </div>
+                <div style={{ width: "40%" }}></div>
             </div>
-            <img
-                className="pop-up-flex"
-                width="200"
-                height="200"
-                style={{ display: "none", justifyContent: "space-around" }}
-                id="profilePic"
-            ></img>
+            <h1>Your account: </h1>
+            <div className="pop-up-flex">
+                <div className="pop-up-flex-col">
+                    <div
+                        className="container container-orange pop-up d-flex flex-column container-results"
+                        style={{ alignItems: "center", height: "150px", justifyContent: "center"}}
+                    >
+                        <i className="fas fa-user-alt" id="pfp"></i>
+                        <img
+                            className="pop-up-flex"
+                            width="100"
+                            height="100"
+                            style={{
+                                display: "none",
+                                justifyContent: "space-around",
+                            }}
+                            id="profilePic"
+                        ></img>
+                    </div>
+                </div>
+                <div className="pop-up-flex-col">
+                    <div
+                        className="container container-purple pop-up d-flex flex-column container-results"
+                        style={{ alignItems: "center", height: "150px", justifyContent: "center"}}
+                    >
+                        <p id="user-id" className="pop-up-flex" style={{textAlign: "center"}}>
+                            Unknown User<i className="fas fa-pen" id="edit-name"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
             <br />
-            <p id="user-id" className="pop-up-flex">
-                Alistair Tan <i className="fas fa-pen" id="edit-name"></i>
-            </p>
             <br />
             <button
                 onClick={() => userLogin()}
@@ -139,7 +167,10 @@ function Profile() {
             >
                 Sign In <span className="fab fa-google"></span>
             </button>
-            <footer>Copyright © Arklink Solutions 2023</footer>
+            <footer>
+                Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
+                Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram
+            </footer>
         </>
     );
 }
