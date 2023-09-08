@@ -126,7 +126,7 @@ function Homepage() {
                         className="container container-orange pop-up d-flex flex-column"
                         style={{ justifyContent: "space-around" }}
                     >
-                        <p>Explore some orgs that might need help ASAP</p>
+                        <p>Explore some organisations that might need help ASAP</p>
                         <div
                             className="d-flex flex-row"
                             style={{
@@ -168,7 +168,7 @@ function Homepage() {
                                                 <button className="CloseModal" onClick={toggleModal}>
                                                     CLOSE
                                                 </button>
-                                                <div id="WTD">insert what the organisation does in our own short breif way</div>
+                                                <div id="WTD">They are a crowdfunding charity that helps people who have fallen through the cracks of our society by Empowers people to help one another – to give hope to those who need it most.</div>
                                                 <br/>
                                                 <div>
                                                     <button className="BLOBY">
