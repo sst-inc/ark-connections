@@ -166,8 +166,35 @@ function Results() {
                             </div>
                         </div>
                     </div>
+                    {user !== null && (
+                        <div
+                        className="container container-orange pop-up d-flex flex-column"
+                        style={{ justifyContent: "space-around" }}
+                    >
+                        <p>To save your progress, </p>
+                        <div
+                            className="d-flex flex-row"
+                            style={{
+                                justifyContent: "space-between",
+                                width: "100%",
+                            }}
+                        >
+                            <button className="btn btn-lg">
+                                <a href="#/profile">
+                                    <p className="btn-cta-text">
+                                        Sign in
+                                    </p>
+                                </a>
+                            </button>
+                            <div style={{ width: "75%", textAlign: "center" }}>
+                                <i class="fa-solid fa-signature fa-beat"></i>
+                            </div>
+                        </div>
+                    </div>
+                    )}
                 </div>
-                <footer>Copyright © Arklink Solutions 2023</footer>
+                <footer>Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
+                Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram</footer>
             </div>
         );
     } else {
