@@ -43,7 +43,6 @@ function FilteredOrganisations() {
     };
 
     let toggleModal = (title = "", desc = "", link = "") => {
-        console.log(modalShown);
         if (modalShown) {
             setModal(false);
         } else {
@@ -52,7 +51,6 @@ function FilteredOrganisations() {
             setModalLink(link);
             setModal(true);
         }
-        console.log(modalShown);
     };
 
     let goodness = {};
@@ -77,8 +75,6 @@ function FilteredOrganisations() {
         sortedOrg = Object.keys(goodness).sort(function (a, b) {
             return goodness[b] - goodness[a];
         });
-        console.log(sortedOrg);
-        console.log(goodness)
     };
 
     filter();
@@ -146,7 +142,7 @@ function FilteredOrganisations() {
             </div>
             <h1 className="fade-in-fade-out">
                 We think you'll fit best in these organisations (Sorted from
-                best to Worst):{" "}
+                best to worst):
             </h1>
             <div className="pop-up-flex">
                 <div className="pop-up-flex-row" style={{ flexWrap: "wrap" }}>
