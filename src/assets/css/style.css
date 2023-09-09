@@ -207,6 +207,11 @@ strong {
         font-size: 1.75vw;
     }
 
+    .org-logo{
+        width: 10vw;
+        padding: 1vw;
+    }
+
     .btn-quiz {
         width: 25vw !important;
         height: 25vw;
@@ -262,6 +267,11 @@ strong {
 @media only screen and (max-width: 500px) {
     h1 {
         font-size: 3.5vw;
+    }
+
+    .org-logo{
+        width: 25vw;
+        padding: 1vw;
     }
 
     .pop-up-flex-row > * {
@@ -490,11 +500,6 @@ body.active-modal {
 
 #user-id {
     font-size: 5vw;
-}
-
-.org-logo{
-    width: 10vw;
-    padding: 1vw;
 }
 
 .modalcontent-purple {
