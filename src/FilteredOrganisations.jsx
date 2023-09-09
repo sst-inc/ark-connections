@@ -8,25 +8,25 @@ function FilteredOrganisations() {
         RayOfHope: {
             name: "Ray Of Hope",
             url: "http://rayofhope.com",
-            image:"ray-of-hope.png",
+            image:"%PUBLIC_URL%/ray-of-hope.png",
             filter: ["humans", "elderly", "caretaking", "introvert"],
         },
         SincSG: {
             name: "Sinc",
             url: "http://sincsg.com",
-            image:"sinc.png",
+            image:"%PUBLIC_URL%/sinc.png",
             filter: ["humans", "teach", "extrovert"],
         },
         SPCA: {
             name: "Society for the Prevention of Cruelty to Animals",
             url: "https://spca.org.sg",
-            image:"sing.png",
+            image:"%PUBLIC_URL%/sing.png",
             filter: ["animals", "environment", "caretaking"],
         },
         NCSS: {
             name: "National Council of Social Services",
             url: "https://www.ncss.gov.sg/volunteer",
-            image:"sinc.png",
+            image:"%PUBLIC_URL%/sinc.png",
             filter: ["humans", "animals", "extrovert"],
         },
     };

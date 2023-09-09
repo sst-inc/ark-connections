@@ -226,7 +226,7 @@ function Homepage() {
                                 )}
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <img src="ray-of-hope.png" alt="Ray Of Hope"></img>
+                                <img src="%PUBLIC_URL%/ray-of-hope.png" alt="Ray Of Hope"></img>
                             </div>
                         </div>
                     </div>
@@ -323,7 +323,7 @@ function Homepage() {
                                 )}
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <img src="sinc.png" alt="Sinc Sg"></img>
+                                <img src="%PUBLIC_URL%/sinc.png" alt="Sinc Sg"></img>
                             </div>
                         </div>
                     </div>
