@@ -111,7 +111,7 @@ function Results() {
                     </div>
                     <h1>What we know about you: </h1>
                     <div className="pop-up-flex">
-                        <div className="pop-up-flex-col">
+                        <div className="pop-up-flex-row">
                             <div
                                 className="container container-orange pop-up d-flex flex-column container-results"
                                 style={{ justifyContent: "space-around" }}
@@ -123,17 +123,18 @@ function Results() {
                                 style={{ justifyContent: "space-around" }}
                             >
                                 <p>
-                                    3. You prefer {finalData[2]} and to{" "}
-                                    {finalData[3]}
+                                    2. You prefer helping the {finalData[1]}
                                 </p>
                             </div>
                         </div>
-                        <div className="pop-up-flex-col">
+                        <div className="pop-up-flex-row">
                             <div
                                 className="container container-purple pop-up d-flex flex-column container-results"
                                 style={{ justifyContent: "space-around" }}
                             >
-                                <p>2. You prefer helping the {finalData[1]}</p>
+                                <p>
+                                    3. You prefer {finalData[2]} and to {finalData[3]}
+                                </p>
                             </div>
                             <div
                                 className="container container-orange pop-up d-flex flex-column container-results"
@@ -147,6 +148,7 @@ function Results() {
                     </div>
                     <br />
                     <div className="pop-up-flex">
+                    <div className="pop-up-flex-row">
                         <div
                             className="container container-green pop-up d-flex flex-column"
                             style={{ justifyContent: "space-around" }}
@@ -210,6 +212,7 @@ function Results() {
                             </div>
                         )}
                     </div>
+                    </div>
                 </div>
             ) : (
                 <div>
@@ -222,6 +225,7 @@ function Results() {
                         <div style={{ width: "40%" }}></div>
                     </div>
                     <div className="pop-up-flex">
+                    <div className="pop-up-flex-row">
                         <a href="#/quiz">
                             <button
                                 className="container btn btn-quiz btn-purple container-results"
@@ -230,6 +234,7 @@ function Results() {
                                 <p className="btn-cta-text">Go to quiz</p>
                             </button>
                         </a>
+                        </div>
                     </div>
                 </div>
             )}

@@ -45,6 +45,18 @@ p {
     white-space: normal;
     overflow-wrap: break-word;
 }
+
+.hr {
+    border-width:0;
+    margin: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 90%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.25);
+    position: relative;
+    animation: var(--floating-animation-time) floating ease infinite;
+}
 /*#endregion*/
 /*#region Navbar*/
 nav ul {
@@ -180,13 +192,13 @@ strong {
     height: fit-content;
 }
 
-.pop-up-flex-col {
+.pop-up-flex-row {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.pop-up-flex-col > * {
+.pop-up-flex-row > * {
     margin: 10px;
 }
 
@@ -196,7 +208,7 @@ strong {
     }
 
     .btn-quiz {
-        width: 35vw !important;
+        width: 25vw !important;
         height: 25vw;
         max-width: 400px !important;
         max-height: 250px !important;
@@ -216,7 +228,7 @@ strong {
     }
 
     .pop-up-flex {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .pop-up > p {
@@ -252,12 +264,12 @@ strong {
         font-size: 3.5vw;
     }
 
-    .pop-up-flex-col > * {
+    .pop-up-flex-row > * {
         margin-top: 10px;
     }
 
     .btn-quiz {
-        height: 50vw;
+        height: 25vw;
         position: relative;
     }
 
@@ -270,6 +282,10 @@ strong {
     }
 
     .pop-up-flex {
+        flex-direction: column;
+    }
+
+    .pop-up-flex-row {
         flex-direction: column;
     }
 

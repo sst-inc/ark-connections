@@ -129,6 +129,7 @@ function FilteredOrganisations() {
                 best to Worst):{" "}
             </h1>
             <div className="pop-up-flex">
+            <div className="pop-up-flex-row" style={{flexWrap: "wrap"}}>
                 {sortedOrg.map((organisation, index) => {
                     console.log(organisation);
                     return (
@@ -151,7 +152,6 @@ function FilteredOrganisations() {
                                     width: "100%",
                                 }}
                             >
-                                <img className="org-logo" src={overAllOrganisations[organisation].image}></img>
                                 <button className="btn btn-lg">
                                     <a
                                         href={
@@ -165,10 +165,12 @@ function FilteredOrganisations() {
                                         </p>
                                     </a>
                                 </button>
+                                <img className="org-logo" src={overAllOrganisations[organisation].image}></img>
                             </div>
                         </div>
                     );
                 })}
+            </div>
             </div>
             <footer>Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
                 Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram</footer>

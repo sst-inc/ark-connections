@@ -199,6 +199,7 @@ function Quiz() {
                 <h1>Remember to answer as sincerely as possible!</h1>
             )}
             <div className="pop-up-flex">
+            <div className="pop-up-flex-row">
                 <button
                     className="container btn btn-quiz btn-orange container-results"
                     style={{ justifyContent: "space-around" }}
@@ -230,7 +231,7 @@ function Quiz() {
                     </p>
                 </button>
             </div>
-            <div className="pop-up-flex">
+            <div className="pop-up-flex-row" style={{justifyContent: "center"}}>
                 <button
                     className="container btn btn-quiz btn-purple container-results"
                     style={{ justifyContent: "space-around" }}
@@ -244,6 +245,23 @@ function Quiz() {
                 >
                     <p className="btn-cta-text">Back</p>
                 </button>
+                {finalData[currentQuestionIndex] != 0 ? (
+                <button
+                className="container btn btn-quiz btn-orange container-results"
+                style={{ justifyContent: "space-around" }}
+                onClick={() =>
+                    changeQuestionIndex(
+                        1,
+                        currentQuestionIndex,
+                        finalData[currentQuestionIndex]
+                    )
+                }
+            >
+                <p className="btn-cta-text">Next</p>
+            </button>
+            ) : (
+                null
+            )} </div>
             </div>
             <footer>Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
                 Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram</footer>

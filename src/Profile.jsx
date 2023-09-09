@@ -143,7 +143,7 @@ function Profile() {
             {user ? (
                 <div>
                     <div className="pop-up-flex">
-                        <div className="pop-up-flex-col">
+                        <div className="pop-up-flex-row">
                             <div
                                 className="container container-orange pop-up d-flex flex-column container-results"
                                 style={{
@@ -164,8 +164,6 @@ function Profile() {
                                     id="profilePic"
                                 ></img>
                             </div>
-                        </div>
-                        <div className="pop-up-flex-col">
                             <div
                                 className="container container-purple pop-up d-flex flex-column container-results"
                                 style={{
@@ -187,9 +185,7 @@ function Profile() {
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <div className="pop-up-flex">
-                        <div className="pop-up-flex-col">
+                        <div className="pop-up-flex-row">
                             <div
                                 className="container container-purple pop-up d-flex flex-column container-results"
                                 style={{
@@ -207,7 +203,7 @@ function Profile() {
                 </div>
             ) : (
             <div className="pop-up-flex">
-                        <div className="pop-up-flex-col">
+                        <div className="pop-up-flex-row">
                             <div
                                 className="container container-orange pop-up d-flex flex-column container-results"
                                 style={{

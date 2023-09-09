@@ -133,7 +133,7 @@ function Homepage() {
             </div>
             <h1>What can you do here?</h1>
             <div className="pop-up-flex">
-                <div className="pop-up-flex-col">
+                <div className="pop-up-flex-row">
                     <div
                         className="container container-orange pop-up d-flex flex-column"
                         style={{ justifyContent: "space-around" }}
@@ -158,6 +158,35 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
+                    <div
+                        className="container container-purple pop-up d-flex flex-column"
+                        style={{ justifyContent: "space-around" }}
+                    >
+                        <p className="h2">
+                            Not sure which organisation to help?
+                        </p>
+                        <div
+                            className="d-flex flex-row"
+                            style={{
+                                justifyContent: "space-between",
+                                width: "100%",
+                            }}
+                        >
+                            <button className="btn btn-lg">
+                                <a href="#/quiz">
+                                    <p className="btn-cta-text">
+                                        Take this quiz!
+                                    </p>
+                                </a>
+                            </button>
+                            <div style={{ width: "75%", textAlign: "center" }}>
+                                <i className="fa-solid fa-clipboard-user pop-up-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="hr"></div>
+                <div className="pop-up-flex-row">
                     <div
                         className="container container-purple pop-up d-flex flex-column"
                         style={{ justifyContent: "space-around" }}
@@ -228,34 +257,6 @@ function Homepage() {
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
                                 <img className="org-logo"src={rofImg} alt="Ray Of Hope"></img>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="pop-up-flex-col">
-                    <div
-                        className="container container-purple pop-up d-flex flex-column"
-                        style={{ justifyContent: "space-around" }}
-                    >
-                        <p className="h2">
-                            Not sure which organisation to help?
-                        </p>
-                        <div
-                            className="d-flex flex-row"
-                            style={{
-                                justifyContent: "space-between",
-                                width: "100%",
-                            }}
-                        >
-                            <button className="btn btn-lg">
-                                <a href="#/quiz">
-                                    <p className="btn-cta-text">
-                                        Take this quiz!
-                                    </p>
-                                </a>
-                            </button>
-                            <div style={{ width: "75%", textAlign: "center" }}>
-                                <i className="fa-solid fa-clipboard-user pop-up-icon"></i>
                             </div>
                         </div>
                     </div>

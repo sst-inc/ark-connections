@@ -62,7 +62,7 @@ function Organisations() {
             </div>
             <h1>Check out these Organisations!</h1>
             <div className="pop-up-flex">
-                <div className="pop-up-flex-col">
+                <div className="pop-up-flex-row">
                     <div
                         className="container container-orange pop-up d-flex flex-column"
                         style={{ justifyContent: "space-around" }}
@@ -96,7 +96,7 @@ function Organisations() {
                         </p>
                     </div>
                 </div>
-                <div className="pop-up-flex-col">
+                <div className="pop-up-flex-row">
                     <div
                         className="container container-purple pop-up d-flex flex-column"
                         style={{ justifyContent: "space-around" }}
