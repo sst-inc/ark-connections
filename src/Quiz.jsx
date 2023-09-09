@@ -18,7 +18,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export let finalData = [0, 0, 0, 0, 0];
+export let finalData = [0, 0, 0, 0, 0, 0];
 export let quizzed = false;
 
 const auth = getAuth(app);
@@ -97,9 +97,9 @@ function Quiz() {
         {
             question: "Which do you prefer?",
             optn1: "Helping the Elderly",
-            optn2: "Helping the Environment",
-            optn1Result: "elderly",
-            optn2Result: "environment",
+            optn2: "Helping the younger generation",
+            optn1Result: "the elderly",
+            optn2Result: "children",
         },
         {
             question: "Which do you prefer?",
@@ -113,15 +113,22 @@ function Quiz() {
             optn1: "I would teach",
             optn2: "I would prefer not to teach",
             optn1Result: "teach",
-            optn2Result: "not teach",
+            optn2Result: "not to teach",
         },
         {
             question: "Do you regard yourself as an introvert or extrovert?",
-            optn1: "Introvert...",
-            optn2: "Extrovert definitely!",
+            optn1: "Introvert",
+            optn2: "Extrovert",
             optn1Result: "introvert",
             optn2Result: "extrovert",
         },
+        {
+            question: "Would you do environmental work?",
+            optn1: "Yes!",
+            optn2: "No",
+            optn1Result: "help the environment",
+            optn2Result: "not help the environment",
+        }
     ];
     return (
         <div>

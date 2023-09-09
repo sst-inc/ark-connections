@@ -123,7 +123,7 @@ function Results() {
                                 style={{ justifyContent: "space-around" }}
                             >
                                 <p>
-                                    2. You prefer helping the {finalData[1]}
+                                    2. You prefer helping {finalData[1]}
                                 </p>
                             </div>
                         </div>
@@ -133,7 +133,7 @@ function Results() {
                                 style={{ justifyContent: "space-around" }}
                             >
                                 <p>
-                                    3. You prefer {finalData[2]} and to {finalData[3]}
+                                    3. You prefer {finalData[2]} and {finalData[3]}
                                 </p>
                             </div>
                             <div
@@ -142,6 +142,16 @@ function Results() {
                             >
                                 <p>
                                     4. You regard yourself as an {finalData[4]}
+                                </p>
+                            </div>
+                        </div>
+                        <div className="pop-up-flex-row">
+                            <div
+                                className="container container-orange pop-up d-flex flex-column container-results"
+                                style={{ justifyContent: "space-around" }}
+                            >
+                                <p>
+                                    5. You would rather {finalData[5]}
                                 </p>
                             </div>
                         </div>

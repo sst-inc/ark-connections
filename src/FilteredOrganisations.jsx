@@ -17,7 +17,7 @@ function FilteredOrganisations() {
             desc: "They are a crowdfunding charity that helps people who have fallen through the cracks of our society by Empowers people to help one another - to give hope to those who need it most.",
             url: "http://rayofhope.com",
             image: rofImg,
-            filter: ["humans", "elderly", "caretaking", "introvert"],
+            filter: ["humans", "the elderly", "caretaking", "introvert"],
         },
         SincSG: {
             name: "Sinc",
@@ -31,7 +31,7 @@ function FilteredOrganisations() {
             desc: "",
             url: "https://spca.org.sg",
             image: sincImg,
-            filter: ["animals", "environment", "caretaking"],
+            filter: ["animals", "help the environment", "caretaking"],
         },
         NCSS: {
             name: "National Council of Social Services",
@@ -157,7 +157,7 @@ function FilteredOrganisations() {
                                 key={index}
                             >
                                 <p>
-                                    {index + 1}. {overAllOrganisations[organisation].name}<br />{goodness[organisation]/finalData.length*100}% score
+                                    {index + 1}. {overAllOrganisations[organisation].name}<br />{(goodness[organisation]/finalData.length*100).toFixed(2)}% score
                                 </p>
                                 <div
                                     className="d-flex flex-row"
