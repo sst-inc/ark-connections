@@ -113,6 +113,11 @@ function Homepage() {
                                 </a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link" href="#/orgs">
+                                    Organisations
+                                </a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link" href="#/profile">
                                     Profile
                                 </a>
@@ -185,7 +190,7 @@ function Homepage() {
                         </div>
                     </div>
                 </div>
-                <div className="hr"></div>
+                <div className="hr" ></div>
                 <div className="pop-up-flex-row">
                     <div
                         className="container container-purple pop-up d-flex flex-column"

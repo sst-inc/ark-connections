@@ -88,6 +88,11 @@ function Results() {
                                 </a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link" href="#/orgs">
+                                    Organisations
+                                </a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link" href="#/profile">
                                     Profile
                                 </a>

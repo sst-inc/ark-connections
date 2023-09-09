@@ -1,6 +1,10 @@
 import React from "react";
 import "./assets/ex_libs/bootstrap_4/bootstrap.css";
 import "./assets/css/style.css";
+import rofImg from "./assets/image/ray-of-hope.png";
+import sincImg from "./assets/image/sinc.png";
+import spcaImg from "./assets/image/SPCA-Logo.png";
+import ncssImg from "./assets/image/ncss.png";
 
 function Organisations() {
     return (
@@ -42,6 +46,11 @@ function Organisations() {
                                 </a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link active" href="#/orgs">
+                                    Organisations
+                                </a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link" href="#/profile">
                                     Profile
                                 </a>
@@ -60,7 +69,7 @@ function Organisations() {
                 </div>
                 <div style={{ width: "40%" }}></div>
             </div>
-            <h1>Check out these Organisations!</h1>
+            <h1>Check out our affiliated Organisations!</h1>
             <div className="pop-up-flex">
                 <div className="pop-up-flex-row">
                     <div
@@ -81,7 +90,7 @@ function Organisations() {
                                 </a>
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <i className="fa-solid fa-computer pop-up-icon"></i>
+                                <img className="org-logo" src={rofImg}></img>
                             </div>
                         </div>
                     </div>
@@ -89,11 +98,23 @@ function Organisations() {
                         className="container container-purple pop-up d-flex flex-column"
                         style={{ justifyContent: "space-around" }}
                     >
-                        <p className="h2">
-                            Urgently needs help!
-                            <br />
-                            Many roles up for grabs!
-                        </p>
+                        <p>National Council Of Social Services</p>
+                        <div
+                            className="d-flex flex-row"
+                            style={{
+                                justifyContent: "space-between",
+                                width: "100%",
+                            }}
+                        >
+                            <button className="btn btn-lg">
+                                <a href="https://www.ncss.gov.sg/volunteer">
+                                    <p className="btn-cta-text">Right here!</p>
+                                </a>
+                            </button>
+                            <div style={{ width: "75%", textAlign: "center" }}>
+                                <img className="org-logo" src={ncssImg}></img>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="pop-up-flex-row">
@@ -115,7 +136,7 @@ function Organisations() {
                                 </a>
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <i className="fa-solid fa-computer pop-up-icon"></i>
+                                <img className="org-logo" src={sincImg}></img>
                             </div>
                         </div>
                     </div>
@@ -123,11 +144,23 @@ function Organisations() {
                         className="container container-orange pop-up d-flex flex-column"
                         style={{ justifyContent: "space-around" }}
                     >
-                        <p className="h2">
-                            Many Slots!
-                            <br />
-                            If you like teaching, this one's for you!
-                        </p>
+                        <p>Society for the Prevention of Cruely to Animals</p>
+                        <div
+                            className="d-flex flex-row"
+                            style={{
+                                justifyContent: "space-between",
+                                width: "100%",
+                            }}
+                        >
+                            <button className="btn btn-lg">
+                                <a href="https://spca.org.sg">
+                                    <p className="btn-cta-text">Right here!</p>
+                                </a>
+                            </button>
+                            <div style={{ width: "75%", textAlign: "center" }}>
+                                <img className="org-logo" src={spcaImg}></img>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

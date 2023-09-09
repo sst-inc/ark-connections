@@ -5,6 +5,8 @@ import "./assets/css/style.css";
 import { finalData } from "./Quiz.jsx";
 import rofImg from "./assets/image/ray-of-hope.png";
 import sincImg from "./assets/image/sinc.png";
+import spcaImg from "./assets/image/SPCA-Logo.png";
+import ncssImg from "./assets/image/ncss.png";
 
 function FilteredOrganisations() {
     const [modalShown, setModal] = useState(false);
@@ -30,14 +32,14 @@ function FilteredOrganisations() {
             name: "Society for the Prevention of Cruelty to Animals",
             desc: "",
             url: "https://spca.org.sg",
-            image: sincImg,
+            image: spcaImg,
             filter: ["animals", "help the environment", "caretaking"],
         },
         NCSS: {
             name: "National Council of Social Services",
             desc: "",
             url: "https://www.ncss.gov.sg/volunteer",
-            image: sincImg,
+            image: ncssImg,
             filter: ["humans", "animals", "extrovert"],
         },
     };
