@@ -4,7 +4,8 @@ import "./assets/ex_libs/bootstrap_4/bootstrap.css";
 import "./assets/css/style.css";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import rofImg from "./assets/image/ray-of-hope.png" ;
+import sincImg from "./assets/image/sinc.png";
 import {
     GoogleAuthProvider,
     getAuth,
@@ -226,7 +227,7 @@ function Homepage() {
                                 )}
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <img src="ray-of-hope.png" alt="Ray Of Hope"></img>
+                                <img className="org-logo"src={rofImg} alt="Ray Of Hope"></img>
                             </div>
                         </div>
                     </div>
@@ -323,7 +324,7 @@ function Homepage() {
                                 )}
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <img src="sinc.png" alt="Sinc Sg"></img>
+                                <img className="org-logo" src={sincImg} alt="Sinc Sg"></img>
                             </div>
                         </div>
                     </div>

@@ -2,31 +2,33 @@ import React from "react";
 import "./assets/ex_libs/bootstrap_4/bootstrap.css";
 import "./assets/css/style.css";
 import { finalData } from "./Quiz.jsx";
+import rofImg from "./assets/image/ray-of-hope.png" ;
+import sincImg from "./assets/image/sinc.png";
 
 function FilteredOrganisations() {
     const overAllOrganisations = {
         RayOfHope: {
             name: "Ray Of Hope",
             url: "http://rayofhope.com",
-            image:"ray-of-hope.png",
+            image: rofImg,
             filter: ["humans", "elderly", "caretaking", "introvert"],
         },
         SincSG: {
             name: "Sinc",
             url: "http://sincsg.com",
-            image:"sinc.png",
+            image: sincImg,
             filter: ["humans", "teach", "extrovert"],
         },
         SPCA: {
             name: "Society for the Prevention of Cruelty to Animals",
             url: "https://spca.org.sg",
-            image:"sing.png",
+            image:sincImg,
             filter: ["animals", "environment", "caretaking"],
         },
         NCSS: {
             name: "National Council of Social Services",
             url: "https://www.ncss.gov.sg/volunteer",
-            image:"sinc.png",
+            image:sincImg,
             filter: ["humans", "animals", "extrovert"],
         },
     };
@@ -149,7 +151,7 @@ function FilteredOrganisations() {
                                     width: "100%",
                                 }}
                             >
-                                <img src={overAllOrganisations[organisation].image}></img>
+                                <img className="org-logo" src={overAllOrganisations[organisation].image}></img>
                                 <button className="btn btn-lg">
                                     <a
                                         href={
