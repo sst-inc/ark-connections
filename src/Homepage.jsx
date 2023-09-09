@@ -39,7 +39,6 @@ function Homepage() {
         console.log("You are logged in as", user);
     });
 
-    console.log(user);
     const [ROHModal, setROHModal] = useState(false);
     const [sincModal, setSincModal] = useState(false);
 
@@ -123,10 +122,10 @@ function Homepage() {
             </div>
             <div className="d-flex flex-row">
                 <div className="startText">
-                    <quoteText>
+                    <h1 className="quoteText">
                         "The smallest act of <strong>kindness</strong> is worth
                         more than <strong>the grandest intention.</strong>"
-                    </quoteText>
+                    </h1>
                     <p>~Oscar Wilde</p>
                 </div>
                 <div style={{ width: "40%" }}></div>
@@ -154,7 +153,7 @@ function Homepage() {
                                 </a>
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <i class="fa-solid fa-computer pop-up-icon"></i>
+                                <i className="fa-solid fa-computer pop-up-icon"></i>
                             </div>
                         </div>
                     </div>
@@ -227,7 +226,7 @@ function Homepage() {
                                 )}
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <i class="fa-regular fa-handshake pop-up-icon"></i>
+                                <i className="fa-regular fa-handshake pop-up-icon"></i>
                             </div>
                         </div>
                     </div>
@@ -255,7 +254,7 @@ function Homepage() {
                                 </a>
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <i class="fa-solid fa-clipboard-user pop-up-icon"></i>
+                                <i className="fa-solid fa-clipboard-user pop-up-icon"></i>
                             </div>
                         </div>
                     </div>
@@ -324,7 +323,7 @@ function Homepage() {
                                 )}
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <i class="fa-regular fa-handshake pop-up-icon"></i>
+                                <i className="fa-regular fa-handshake pop-up-icon"></i>
                             </div>
                         </div>
                     </div>

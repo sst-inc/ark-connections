@@ -34,15 +34,17 @@ function Profile() {
     };
 
     let userSignOut = () => {
+        if (confirm('Are you sure you want to sign out')) {
         signOut(auth)
             .then(() => {
                 console.warn("User is signed out")
-                window.location = "#/";
+                window.open("#/", "_self")
             })
             .catch((err) => {
                 alert("Error:" + err + "\nSee console for details");
                 console.error(err);
             });
+        }
     };
 
     let loadSaves = () => {
@@ -75,7 +77,11 @@ function Profile() {
                 <div id="navbar-container">
                     <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                         <a className="navbar-brand" href="#/">
-                            <i class="fas fa-angle-left"></i>
+                            <img
+                                src="assets/media/favicon.png"
+                                alt="Logo"
+                                className="logo"
+                            />
                         </a>
                         <a
                             className="navbar-brand navbar-nav-text-heading"
@@ -126,9 +132,9 @@ function Profile() {
             </div>
             <div className="d-flex flex-row">
                 <div className="startText">
-                    <quoteText>
+                    <h1 className="quoteText">
                         "Hakuna <strong>Matata</strong>!"
-                    </quoteText>
+                    </h1>
                     <p>~Timon and Pumbaa, The Lion King (1994)</p>
                 </div>
                 <div style={{ width: "40%" }}></div>

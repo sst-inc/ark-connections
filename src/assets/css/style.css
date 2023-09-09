@@ -228,7 +228,7 @@ strong {
         line-height: 1;
     }
 
-    quoteText {
+    .quoteText {
         font-size: 3vw;
         line-height: 1;
     }
@@ -282,7 +282,7 @@ strong {
         line-height: 1;
     }
 
-    quoteText {
+    .quoteText {
         font-size: 6vw;
         line-height: 1;
     }
@@ -323,7 +323,7 @@ strong {
 }
 
 .container-orange * .modalcontent {
-    background-color: var(--notSoGentleOrange);
+    background: linear-gradient(135deg, white, var(--notSoGentleOrange), white);
 }
 
 .container-purple {
@@ -348,7 +348,7 @@ strong {
 }
 
 .container-purple * .modalcontent {
-    background-color: var(--softPurple);
+    background: linear-gradient(135deg, white, var(--softPurple), white);
 }
 
 .container-green {

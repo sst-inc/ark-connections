@@ -11,7 +11,7 @@ function Organisations() {
             <div id="navbar-container">
                 <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                     <a className="navbar-brand" href="#/">
-                        <i class="fa-solid fa-arrow-left"></i> Back to home
+                        <i className="fa-solid fa-arrow-left"></i> Back to home
                     </a>
                     <button
                         className="navbar-toggler"
@@ -52,10 +52,10 @@ function Organisations() {
             </div>
             <div className="d-flex flex-row">
                 <div className="startText">
-                    <quoteText>
+                    <h1 className="quoteText">
                         "The gift of <strong>service</strong> leads to a life of{" "}
                         <strong>love.</strong>"
-                    </quoteText>
+                    </h1>
                     <p>~Mary White</p>
                 </div>
                 <div style={{ width: "40%" }}></div>
@@ -81,7 +81,7 @@ function Organisations() {
                                 </a>
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <i class="fa-solid fa-computer pop-up-icon"></i>
+                                <i className="fa-solid fa-computer pop-up-icon"></i>
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@ function Organisations() {
                                 </a>
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <i class="fa-solid fa-computer pop-up-icon"></i>
+                                <i className="fa-solid fa-computer pop-up-icon"></i>
                             </div>
                         </div>
                     </div>

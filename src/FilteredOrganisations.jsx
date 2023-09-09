@@ -68,7 +68,7 @@ function FilteredOrganisations() {
                         href="#/"
                         style={{ paddingLeft: "4px", paddingRight: "4px" }}
                     >
-                        <i class="fa-solid fa-arrow-left"></i> Back to home
+                        <i className="fa-solid fa-arrow-left"></i> Back to home
                     </a>
                     <button
                         className="navbar-toggler"
@@ -109,11 +109,11 @@ function FilteredOrganisations() {
             </div>
             <div className="d-flex flex-row">
                 <div className="startText">
-                    <quoteText>
+                    <h1 className="quoteText">
                         "Happiness is when what you <strong>think</strong>, what
-                        you <strong>say</strong>, and what you{" "}
+                        you <strong>say</strong>, and what you
                         <strong>do</strong> are in harmony."
-                    </quoteText>
+                    </h1>
                     <p>~Mahatma Gandhi</p>
                 </div>
                 <div style={{ width: "40%" }}></div>

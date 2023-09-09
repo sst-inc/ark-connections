@@ -18,8 +18,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export var finalData = [0, 0, 0, 0, 0];
-export var quizzed = false;
+export let finalData = [0, 0, 0, 0, 0];
+export let quizzed = false;
 
 const auth = getAuth(app);
 export var user = auth.currentUser;
@@ -62,8 +62,8 @@ function Quiz() {
                 )
             ) {
                 quizzed = true;
-                window.location = "#/results";
                 updateQnIndex(0);
+                window.location = "#/results";
                 if (user !== null) {
                     writeUserData(
                         user.uid,
@@ -113,7 +113,7 @@ function Quiz() {
             optn1: "I would teach",
             optn2: "I would prefer not to teach",
             optn1Result: "teach",
-            optn2Result: "no teach",
+            optn2Result: "not teach",
         },
         {
             question: "Do you regard yourself as an introvert or extrovert?",
@@ -182,10 +182,10 @@ function Quiz() {
             </div>
             <div className="d-flex flex-row">
                 <div className="startText">
-                    <quoteText>
+                    <h1 className="quoteText">
                         Quiz: Question {currentQuestionIndex + 1} of{" "}
                         {data.length}
-                    </quoteText>
+                    </h1>
                     <p>{data[currentQuestionIndex].question}</p>
                 </div>
                 <div style={{ width: "40%" }}></div>
