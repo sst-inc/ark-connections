@@ -226,7 +226,7 @@ function Homepage() {
                                 )}
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <i className="fa-regular fa-handshake pop-up-icon"></i>
+                                <img src="ray-of-hope.png" alt="Ray Of Hope"></img>
                             </div>
                         </div>
                     </div>
@@ -323,7 +323,7 @@ function Homepage() {
                                 )}
                             </button>
                             <div style={{ width: "75%", textAlign: "center" }}>
-                                <i className="fa-regular fa-handshake pop-up-icon"></i>
+                                <img src="sinc.png" alt="Sinc Sg"></img>
                             </div>
                         </div>
                     </div>

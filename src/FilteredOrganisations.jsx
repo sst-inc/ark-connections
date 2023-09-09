@@ -8,22 +8,26 @@ function FilteredOrganisations() {
         RayOfHope: {
             name: "Ray Of Hope",
             url: "http://rayofhope.com",
-            filter: ["humans", "elderly", "caretaking"],
+            image:"ray-of-hope.png",
+            filter: ["humans", "elderly", "caretaking", "introvert"],
         },
         SincSG: {
             name: "Sinc",
             url: "http://sincsg.com",
-            filter: ["humans", "teach"],
+            image:"sinc.png",
+            filter: ["humans", "teach", "extrovert"],
         },
         SPCA: {
             name: "Society for the Prevention of Cruelty to Animals",
             url: "https://spca.org.sg",
+            image:"sing.png",
             filter: ["animals", "environment", "caretaking"],
         },
         NCSS: {
             name: "National Council of Social Services",
             url: "https://www.ncss.gov.sg/volunteer",
-            filter: ["humans", "animals"],
+            image:"sinc.png",
+            filter: ["humans", "animals", "extrovert"],
         },
     };
 
@@ -112,7 +116,7 @@ function FilteredOrganisations() {
                     <h1 className="quoteText">
                         "Happiness is when what you <strong>think</strong>, what
                         you <strong>say</strong>, and what you
-                        <strong>do</strong> are in harmony."
+                        <strong> do</strong> are in harmony."
                     </h1>
                     <p>~Mahatma Gandhi</p>
                 </div>
@@ -145,6 +149,7 @@ function FilteredOrganisations() {
                                     width: "100%",
                                 }}
                             >
+                                <img src={overAllOrganisations[organisation].image}></img>
                                 <button className="btn btn-lg">
                                     <a
                                         href={
