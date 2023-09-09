@@ -88,11 +88,18 @@ function FilteredOrganisations() {
             <div id="navbar-container">
                 <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                     <a
-                        className="navbar-brand"
+                        className="navbar-brand d-flex flex-row"
                         href="#/"
-                        style={{ paddingLeft: "4px", paddingRight: "4px" }}
+                        style={{ paddingLeft: "4px", paddingRight: "4px", alignItems: "center", height: "fit-content" }}
                     >
-                        <i className="fa-solid fa-arrow-left"></i> Back to home
+                        <p>
+                        <i className="fa-solid fa-arrow-left"></i>
+                    </p>
+                    <p
+                        className="navbar-nav-text-heading"
+                    >
+                        Back to home
+                    </p>
                     </a>
                     <button
                         className="navbar-toggler"
@@ -120,6 +127,11 @@ function FilteredOrganisations() {
                             <li className="nav-item">
                                 <a className="nav-link active" href="#/results">
                                     Results
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#/orgs">
+                                    Organisations
                                 </a>
                             </li>
                             <li className="nav-item">

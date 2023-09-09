@@ -163,13 +163,13 @@ strong {
 
 @keyframes floating-modal {
     0% {
-        top: 48%;
+        top: 50%;
     }
     50% {
         top: 50%;
     }
     100% {
-        top: 48%;
+        top: 50%;
     }
 }
 

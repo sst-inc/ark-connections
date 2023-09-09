@@ -14,8 +14,19 @@ function Organisations() {
             <noscript>You need to enable JavaScript to run this app.</noscript>
             <div id="navbar-container">
                 <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
-                    <a className="navbar-brand" href="#/">
-                        <i className="fa-solid fa-arrow-left"></i> Back to home
+                <a className="navbar-brand" href="#/">
+                        <img
+                            src="assets/media/favicon.png"
+                            alt="Logo"
+                            className="logo"
+                        />
+                    </a>
+                    <a
+                        className="navbar-brand navbar-nav-text-heading"
+                        href="#/"
+                        style={{ padding: "5px" }}
+                    >
+                        Ark Connections
                     </a>
                     <button
                         className="navbar-toggler"
