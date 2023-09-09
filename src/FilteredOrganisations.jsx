@@ -1,42 +1,64 @@
 import React from "react";
+import { useState } from "react";
 import "./assets/ex_libs/bootstrap_4/bootstrap.css";
 import "./assets/css/style.css";
 import { finalData } from "./Quiz.jsx";
-import rofImg from "./assets/image/ray-of-hope.png" ;
+import rofImg from "./assets/image/ray-of-hope.png";
 import sincImg from "./assets/image/sinc.png";
 
 function FilteredOrganisations() {
+    const [modalShown, setModal] = useState(false);
+    const [modalTitle, setModalTitle] = useState("");
+    const [modalDesc, setModalDesc] = useState("");
+    const [modalLink, setModalLink] = useState("");
     const overAllOrganisations = {
         RayOfHope: {
             name: "Ray Of Hope",
+            desc: "They are a crowdfunding charity that helps people who have fallen through the cracks of our society by Empowers people to help one another - to give hope to those who need it most.",
             url: "http://rayofhope.com",
             image: rofImg,
             filter: ["humans", "elderly", "caretaking", "introvert"],
         },
         SincSG: {
             name: "Sinc",
+            desc: "Teaches children the basic of web development",
             url: "http://sincsg.com",
             image: sincImg,
-            filter: ["humans", "teach", "extrovert"],
+            filter: ["humans", "children", "teach", "extrovert"],
         },
         SPCA: {
             name: "Society for the Prevention of Cruelty to Animals",
+            desc: "",
             url: "https://spca.org.sg",
-            image:sincImg,
+            image: sincImg,
             filter: ["animals", "environment", "caretaking"],
         },
         NCSS: {
             name: "National Council of Social Services",
+            desc: "",
             url: "https://www.ncss.gov.sg/volunteer",
-            image:sincImg,
+            image: sincImg,
             filter: ["humans", "animals", "extrovert"],
         },
+    };
+
+    let toggleModal = (title = "", desc = "", link = "") => {
+        console.log(modalShown);
+        if (modalShown) {
+            setModal(false);
+        } else {
+            setModalTitle(title);
+            setModalDesc(desc);
+            setModalLink(link);
+            setModal(true);
+        }
+        console.log(modalShown);
     };
 
     let goodness = {};
     let sortedOrg = {};
 
-    let filter = (filters) => {
+    let filter = () => {
         for (let key in overAllOrganisations) {
             for (let filterKind in finalData) {
                 if (
@@ -44,13 +66,11 @@ function FilteredOrganisations() {
                         finalData[filterKind]
                     )
                 ) {
-                    console.log(key, finalData[filterKind]);
                     if (key in goodness) {
                         goodness[key] += 1;
                     } else {
                         goodness[key] = 1;
                     }
-                    console.log(goodness);
                 }
             }
         }
@@ -58,10 +78,10 @@ function FilteredOrganisations() {
             return goodness[b] - goodness[a];
         });
         console.log(sortedOrg);
+        console.log(goodness)
     };
 
     filter();
-
     return (
         <div>
             <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
@@ -129,51 +149,104 @@ function FilteredOrganisations() {
                 best to Worst):{" "}
             </h1>
             <div className="pop-up-flex">
-            <div className="pop-up-flex-row" style={{flexWrap: "wrap"}}>
-                {sortedOrg.map((organisation, index) => {
-                    console.log(organisation);
-                    return (
-                        <div
-                            className="container container-purple pop-up d-flex flex-column"
-                            style={{
-                                justifyContent: "space-around",
-                                marginBottom: "4vw",
-                            }}
-                            key={index}
-                        >
-                            <p>
-                                {index + 1}.{" "}
-                                {overAllOrganisations[organisation].name}
-                            </p>
+                <div className="pop-up-flex-row" style={{ flexWrap: "wrap" }}>
+                    {sortedOrg.map((organisation, index) => {
+                        return (
                             <div
-                                className="d-flex flex-row"
+                                className="container container-purple pop-up d-flex flex-column"
                                 style={{
-                                    justifyContent: "space-between",
-                                    width: "100%",
+                                    justifyContent: "space-evenly",
+                                    marginBottom: "4vw",
                                 }}
+                                key={index}
                             >
-                                <button className="btn btn-lg">
-                                    <a
-                                        href={
-                                            overAllOrganisations[organisation]
-                                                .url
+                                <p>
+                                    {index + 1}. {overAllOrganisations[organisation].name}<br />{goodness[organisation]/finalData.length*100}% score
+                                </p>
+                                <div
+                                    className="d-flex flex-row"
+                                    style={{
+                                        justifyContent: "space-between",
+                                        width: "100%",
+                                    }}
+                                >
+                                    <button
+                                        className="btn btn-lg"
+                                        onClick={() =>
+                                            toggleModal(
+                                                overAllOrganisations[
+                                                    organisation
+                                                ].name,
+                                                overAllOrganisations[
+                                                    organisation
+                                                ].desc,
+                                                overAllOrganisations[
+                                                    organisation
+                                                ].url
+                                            )
                                         }
-                                        target="_blank"
                                     >
                                         <p className="btn-cta-text">
-                                            Right here!
+                                            View More
                                         </p>
-                                    </a>
+                                    </button>
+                                    <img
+                                        className="org-logo"
+                                        src={
+                                            overAllOrganisations[organisation]
+                                                .image
+                                        }
+                                    ></img>
+                                </div>
+                            </div>
+                        );
+                    })}
+                    {modalShown && (
+                        <div className="Modal">
+                            <div
+                                onClick={() => toggleModal()}
+                                className="overlay"
+                            ></div>
+                            <div className="modalcontent modalcontent-orange">
+                                <p className="h2">{modalTitle}</p>
+                                <button
+                                    className="CloseModal btn btn-danger"
+                                    onClick={() => toggleModal()}
+                                >
+                                    X
                                 </button>
-                                <img className="org-logo" src={overAllOrganisations[organisation].image}></img>
+                                <p>{modalDesc}</p>
+                                <br />
+                                <div
+                                    className="d-flex flex-row"
+                                    style={{
+                                        justifyContent: "space-around",
+                                    }}
+                                >
+                                    <button className="btn btn-lg">
+                                        <a href="#/quiz">
+                                            <p className="btn-cta-text">
+                                                Take the quiz
+                                            </p>
+                                        </a>
+                                    </button>
+                                    <button className="btn btn-lg">
+                                        <a href={modalLink} target="_blank">
+                                            <p className="btn-cta-text">
+                                                Find out more!
+                                            </p>
+                                        </a>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    );
-                })}
+                    )}
+                </div>
             </div>
-            </div>
-            <footer>Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
-                Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram</footer>
+            <footer>
+                Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
+                Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram
+            </footer>
         </div>
     );
 }

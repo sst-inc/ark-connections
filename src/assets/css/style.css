@@ -496,4 +496,42 @@ body.active-modal {
     width: 10vw;
 }
 
+.modalcontent-purple {
+    background: linear-gradient(135deg, white, var(--softPurple), white);
+}
+
+.modalcontent-purple * .btn {
+    background-color: var(--risingPurple);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.modalcontent-purple * .btn:hover {
+    background-color: var(--mediumPurple);
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modalcontent-purple * .btn:active {
+    background-color: var(--darkPurple);
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modalcontent-orange {
+    background: linear-gradient(135deg, white, var(--notSoGentleOrange), white);
+}
+
+.modalcontent-orange * .btn {
+    background-color: var(--risingOrange);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.modalcontent-orange * .btn:hover {
+    background-color: var(--mediumOrange);
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modalcontent-orange * .btn:active {
+    background-color: var(--darkOrange);
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
+}
+
 /*#endregion*/
