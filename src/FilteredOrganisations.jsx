@@ -235,13 +235,6 @@ function FilteredOrganisations() {
                                     }}
                                 >
                                     <button className="btn btn-lg">
-                                        <a href="#/quiz">
-                                            <p className="btn-cta-text">
-                                                Take the quiz
-                                            </p>
-                                        </a>
-                                    </button>
-                                    <button className="btn btn-lg">
                                         <a href={modalLink} target="_blank">
                                             <p className="btn-cta-text">
                                                 Find out more!

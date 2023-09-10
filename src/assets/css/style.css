@@ -246,6 +246,7 @@ strong {
 
     .pop-up {
         width: 35vw;
+        min-height: fit-content;
         height: 25vw;
         max-width: 400px !important;
         max-height: 250px !important;
@@ -294,7 +295,8 @@ strong {
     }
 
     .org-logo{
-        width: 25vw;
+        width: 22vw;
+        max-height: 22vw;
         padding: 1vw;
     }
 
@@ -308,7 +310,8 @@ strong {
     }
 
     .pop-up {
-        height: 50vw;
+        height: fit-content;
+        min-height: 50vw;
         position: relative;
         animation-name: pop-ups;
         animation-duration: 4s;
@@ -338,7 +341,7 @@ strong {
     }
 
     .btn-cta-text {
-        font-size: 4.5vw;
+        font-size: 4vw;
         padding: 0 !important;
     }
 

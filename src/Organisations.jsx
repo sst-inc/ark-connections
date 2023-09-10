@@ -29,8 +29,19 @@ function Organisations() {
             <div className="main-content">
             <div className="navbar-container">
                 <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
-                    <a className="navbar-brand" href="#/">
-                        <i className="fa-solid fa-arrow-left"></i> Back to home
+                <a className="navbar-brand" href="#/">
+                        <img
+                            src="assets/media/favicon.png"
+                            alt="Logo"
+                            className="logo"
+                        />
+                    </a>
+                    <a
+                        className="navbar-brand navbar-nav-text-heading"
+                        href="#/"
+                        style={{ padding: "5px" }}
+                    >
+                        Ark Connections
                     </a>
                     <button
                         className="navbar-toggler"
@@ -147,6 +158,7 @@ function Organisations() {
                                     className="d-flex flex-row"
                                     style={{
                                         justifyContent: "space-around",
+                                        flexWrap: "wrap",
                                     }}
                                 >
                                     <button className="btn btn-lg">
