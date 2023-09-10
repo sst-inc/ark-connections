@@ -74,7 +74,7 @@ function Profile() {
                 <noscript>
                     You need to enable JavaScript to run this app.
                 </noscript>
-                <div id="navbar-container">
+                <div className="navbar-container">
                     <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                         <a className="navbar-brand" href="#/">
                             <img

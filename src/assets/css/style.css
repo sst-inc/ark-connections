@@ -129,7 +129,11 @@ body > div > div > * {
     animation: 2s fade-in ease;
 }
 
-#navbar-container {
+.navbar-container {
+    animation: none !important;
+}
+
+nav {
     animation: none !important;
 }
 
@@ -163,13 +167,13 @@ strong {
 
 @keyframes floating-modal {
     0% {
-        top: 48%;
+        top: 50%;
     }
     50% {
         top: 50%;
     }
     100% {
-        top: 48%;
+        top: 50%;
     }
 }
 
@@ -266,7 +270,7 @@ strong {
 
 @media only screen and (max-width: 500px) {
     h1 {
-        font-size: 5vw;
+        font-size: 3.5vw;
     }
 
     .org-logo{
@@ -300,30 +304,30 @@ strong {
     }
 
     .pop-up > p {
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     .startText p {
-        font-size: 8vw;
+        font-size: 4vw;
         line-height: 1;
     }
 
     .quoteText {
-        font-size: 7vw;
+        font-size: 6vw;
         line-height: 1;
     }
 
     .btn-cta-text {
-        font-size: 4vw;
+        font-size: 3vw;
         padding: 0 !important;
     }
 
     .pop-up-icon {
-        font-size: 10vw;
+        font-size: 15vw;
     }
 
     footer {
-        font-size: 3.5vw;
+        font-size: 2vw;
     }
 }
 
