@@ -30,14 +30,14 @@ function FilteredOrganisations() {
         },
         SPCA: {
             name: "Society for the Prevention of Cruelty to Animals",
-            desc: "",
+            desc: "The Society for the Prevention of Cruelty to Animals (SPCA) is a nonprofit organization dedicated to the welfare and protection of animals. It works to prevent cruelty, rescue and rehabilitate animals in distress, promote responsible pet ownership, and advocate for animal rights through education and advocacy efforts.",
             url: "https://spca.org.sg",
             image: spcaImg,
             filter: ["animals", "help the environment", "caretaking"],
         },
         NCSS: {
             name: "National Council of Social Services",
-            desc: "",
+            desc: "The National Council of Social Services (NCSS) in Singapore is a government-affiliated organization that plays a pivotal role in coordinating and supporting social service agencies and initiatives. NCSS collaborates with various stakeholders to enhance social well-being, foster inclusivity, and provide essential services to individuals and communities in need.",
             url: "https://www.ncss.gov.sg/volunteer",
             image: ncssImg,
             filter: ["humans", "animals", "extrovert"],
@@ -85,7 +85,7 @@ function FilteredOrganisations() {
             <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
-            <div id="navbar-container">
+            <div className="navbar-container">
                 <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                     <a
                         className="navbar-brand d-flex flex-row"

@@ -129,7 +129,11 @@ body > div > div > * {
     animation: 2s fade-in ease;
 }
 
-#navbar-container {
+.navbar-container {
+    animation: none !important;
+}
+
+nav {
     animation: none !important;
 }
 
