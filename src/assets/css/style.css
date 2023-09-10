@@ -266,7 +266,7 @@ strong {
 
 @media only screen and (max-width: 500px) {
     h1 {
-        font-size: 3.5vw;
+        font-size: 5vw;
     }
 
     .org-logo{
@@ -304,17 +304,17 @@ strong {
     }
 
     .startText p {
-        font-size: 4vw;
+        font-size: 8vw;
         line-height: 1;
     }
 
     .quoteText {
-        font-size: 6vw;
+        font-size: 7vw;
         line-height: 1;
     }
 
     .btn-cta-text {
-        font-size: 3vw;
+        font-size: 4vw;
         padding: 0 !important;
     }
 
@@ -323,7 +323,7 @@ strong {
     }
 
     footer {
-        font-size: 2vw;
+        font-size: 3.5vw;
     }
 }
 
