@@ -42,6 +42,7 @@ a {
 p {
     margin: 0;
     padding: 10px;
+    padding-left: 0px;
     white-space: normal;
     overflow-wrap: break-word;
 }
@@ -49,14 +50,33 @@ p {
 .hr {
     border-width:0;
     margin: auto;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    width: 90%;
-    height: 5px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    width: 80%;
+    height: 1px;
     background-color: var(--darkOrange);
+    opacity: 0.25;
     position: relative;
     animation: var(--floating-animation-time) floating ease infinite;
 }
+
+#body > * > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 85vh;
+    height: fit-content;
+}
+
+.main-content {
+    flex: 1 0 auto;
+}
+
+footer {
+    margin-top: 50px;
+    flex-shrink: 0;
+}
+
 /*#endregion*/
 /*#region Navbar*/
 nav ul {
@@ -120,7 +140,7 @@ body {
         var(--deepBlue)
     );
     background-size: 400%;
-    min-height: 100vh !important;
+    min-height: 100vh;
     height: fit-content;
 }
 
@@ -270,7 +290,7 @@ strong {
 
 @media only screen and (max-width: 500px) {
     h1 {
-        font-size: 3.5vw;
+        font-size: 4.75vw;
     }
 
     .org-logo{
@@ -304,21 +324,21 @@ strong {
     }
 
     .pop-up > p {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     .startText p {
-        font-size: 4vw;
+        font-size: 6vw;
         line-height: 1;
     }
 
     .quoteText {
-        font-size: 6vw;
+        font-size: 9vw;
         line-height: 1;
     }
 
     .btn-cta-text {
-        font-size: 3vw;
+        font-size: 4.5vw;
         padding: 0 !important;
     }
 
@@ -415,7 +435,6 @@ footer {
     text-align: center;
     color: var(--lighterBlue);
     padding: 0 !important;
-    padding-top: 100px !important;
 }
 
 .container-results {

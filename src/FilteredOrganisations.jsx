@@ -7,42 +7,42 @@ import rofImg from "./assets/image/ray-of-hope.png";
 import sincImg from "./assets/image/sinc.png";
 import spcaImg from "./assets/image/SPCA-Logo.png";
 import ncssImg from "./assets/image/ncss.png";
+export const overAllOrganisations = {
+    RayOfHope: {
+        name: "Ray Of Hope",
+        desc: "They are a crowdfunding charity that helps people who have fallen through the cracks of our society by Empowers people to help one another - to give hope to those who need it most.",
+        url: "http://rayofhope.com",
+        image: rofImg,
+        filter: ["humans", "the elderly", "caretaking", "introvert"],
+    },
+    SincSG: {
+        name: "Sinc",
+        desc: "Teaches children the basic of web development",
+        url: "http://sincsg.com",
+        image: sincImg,
+        filter: ["humans", "children", "teach", "extrovert"],
+    },
+    SPCA: {
+        name: "Society for the Prevention of Cruelty to Animals",
+        desc: "The Society for the Prevention of Cruelty to Animals (SPCA) is a nonprofit organization dedicated to the welfare and protection of animals. It works to prevent cruelty, rescue and rehabilitate animals in distress, promote responsible pet ownership, and advocate for animal rights through education and advocacy efforts.",
+        url: "https://spca.org.sg",
+        image: spcaImg,
+        filter: ["animals", "help the environment", "caretaking"],
+    },
+    NCSS: {
+        name: "National Council of Social Services",
+        desc: "The National Council of Social Services (NCSS) in Singapore is a government-affiliated organization that plays a pivotal role in coordinating and supporting social service agencies and initiatives. NCSS collaborates with various stakeholders to enhance social well-being, foster inclusivity, and provide essential services to individuals and communities in need.",
+        url: "https://www.ncss.gov.sg/volunteer",
+        image: ncssImg,
+        filter: ["humans", "animals", "extrovert"],
+    },
+};
 
 function FilteredOrganisations() {
     const [modalShown, setModal] = useState(false);
     const [modalTitle, setModalTitle] = useState("");
     const [modalDesc, setModalDesc] = useState("");
     const [modalLink, setModalLink] = useState("");
-    const overAllOrganisations = {
-        RayOfHope: {
-            name: "Ray Of Hope",
-            desc: "They are a crowdfunding charity that helps people who have fallen through the cracks of our society by Empowers people to help one another - to give hope to those who need it most.",
-            url: "http://rayofhope.com",
-            image: rofImg,
-            filter: ["humans", "the elderly", "caretaking", "introvert"],
-        },
-        SincSG: {
-            name: "Sinc",
-            desc: "Teaches children the basic of web development",
-            url: "http://sincsg.com",
-            image: sincImg,
-            filter: ["humans", "children", "teach", "extrovert"],
-        },
-        SPCA: {
-            name: "Society for the Prevention of Cruelty to Animals",
-            desc: "The Society for the Prevention of Cruelty to Animals (SPCA) is a nonprofit organization dedicated to the welfare and protection of animals. It works to prevent cruelty, rescue and rehabilitate animals in distress, promote responsible pet ownership, and advocate for animal rights through education and advocacy efforts.",
-            url: "https://spca.org.sg",
-            image: spcaImg,
-            filter: ["animals", "help the environment", "caretaking"],
-        },
-        NCSS: {
-            name: "National Council of Social Services",
-            desc: "The National Council of Social Services (NCSS) in Singapore is a government-affiliated organization that plays a pivotal role in coordinating and supporting social service agencies and initiatives. NCSS collaborates with various stakeholders to enhance social well-being, foster inclusivity, and provide essential services to individuals and communities in need.",
-            url: "https://www.ncss.gov.sg/volunteer",
-            image: ncssImg,
-            filter: ["humans", "animals", "extrovert"],
-        },
-    };
 
     let toggleModal = (title = "", desc = "", link = "") => {
         if (modalShown) {
@@ -85,6 +85,7 @@ function FilteredOrganisations() {
             <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
+            <div className="main-content">
             <div className="navbar-container">
                 <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                     <a
@@ -252,6 +253,7 @@ function FilteredOrganisations() {
                         </div>
                     )}
                 </div>
+            </div>
             </div>
             <footer>
                 Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,

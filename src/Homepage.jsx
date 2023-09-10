@@ -68,6 +68,7 @@ function Homepage() {
             <script src="./assets/ex_libs/jQuery/jquery-3.6.4.slim.min.js"></script>
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
+            <div className="main-content">
             <div className="navbar-container">
                 <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
                     <a className="navbar-brand" href="#/">
@@ -335,7 +336,7 @@ function Homepage() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div></div>
             <footer>
                 Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
                 Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram
