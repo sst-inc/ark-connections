@@ -86,167 +86,188 @@ function FilteredOrganisations() {
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
             <div className="main-content">
-            <div className="navbar-container">
-                <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
-                    <a
-                        className="navbar-brand d-flex flex-row"
-                        href="#/"
-                        style={{ paddingLeft: "4px", paddingRight: "4px", alignItems: "center", height: "fit-content" }}
-                    >
-                        <p>
-                        <i className="fa-solid fa-arrow-left"></i>
-                    </p>
-                    <p
-                        className="navbar-nav-text-heading"
-                    >
-                        Back to home
-                    </p>
-                    </a>
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapsibleNavbar"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div
-                        className="collapse navbar-collapse"
-                        id="collapsibleNavbar"
-                    >
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a className="nav-link" href="#/">
-                                    Home
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#/quiz">
-                                    Quiz
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link active" href="#/results">
-                                    Results
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#/orgs">
-                                    Organisations
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#/profile">
-                                    Profile
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div className="d-flex flex-row">
-                <div className="startText">
-                    <h1 className="quoteText">
-                        "Happiness is when what you <strong>think</strong>, what
-                        you <strong>say</strong>, and what you
-                        <strong> do</strong> are in harmony."
-                    </h1>
-                    <p>~Mahatma Gandhi</p>
-                </div>
-                <div style={{ width: "40%" }}></div>
-            </div>
-            <h1 className="fade-in-fade-out">
-                We think you'll fit best in these organisations (Sorted from
-                best to worst):
-            </h1>
-            <div className="pop-up-flex">
-                <div className="pop-up-flex-row" style={{ flexWrap: "wrap" }}>
-                    {sortedOrg.map((organisation, index) => {
-                        return (
-                            <div
-                                className="container container-purple pop-up d-flex flex-column"
-                                style={{
-                                    justifyContent: "space-evenly",
-                                    marginBottom: "4vw",
-                                }}
-                                key={index}
-                            >
-                                <p>
-                                    {index + 1}. {overAllOrganisations[organisation].name}<br />{(goodness[organisation]/finalData.length*100).toFixed(2)}% score
-                                </p>
-                                <div
-                                    className="d-flex flex-row"
-                                    style={{
-                                        justifyContent: "space-between",
-                                        width: "100%",
-                                    }}
-                                >
-                                    <button
-                                        className="btn btn-lg"
-                                        onClick={() =>
-                                            toggleModal(
-                                                overAllOrganisations[
-                                                    organisation
-                                                ].name,
-                                                overAllOrganisations[
-                                                    organisation
-                                                ].desc,
-                                                overAllOrganisations[
-                                                    organisation
-                                                ].url
-                                            )
-                                        }
+                <div className="navbar-container">
+                    <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
+                        <a
+                            className="navbar-brand d-flex flex-row"
+                            href="#/"
+                            style={{
+                                paddingLeft: "4px",
+                                paddingRight: "4px",
+                                alignItems: "center",
+                                height: "fit-content",
+                            }}
+                        >
+                            <p>
+                                <i className="fa-solid fa-arrow-left"></i>
+                            </p>
+                            <p className="navbar-nav-text-heading">
+                                Back to home
+                            </p>
+                        </a>
+                        <button
+                            className="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapsibleNavbar"
+                        >
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div
+                            className="collapse navbar-collapse"
+                            id="collapsibleNavbar"
+                        >
+                            <ul className="navbar-nav">
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#/">
+                                        Home
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#/quiz">
+                                        Quiz
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a
+                                        className="nav-link active"
+                                        href="#/results"
                                     >
-                                        <p className="btn-cta-text">
-                                            View More
-                                        </p>
-                                    </button>
-                                    <img
-                                        className="org-logo"
-                                        src={
-                                            overAllOrganisations[organisation]
-                                                .image
-                                        }
-                                    ></img>
-                                </div>
-                            </div>
-                        );
-                    })}
-                    {modalShown && (
-                        <div className="Modal">
-                            <div
-                                onClick={() => toggleModal()}
-                                className="overlay"
-                            ></div>
-                            <div className="modalcontent modalcontent-orange">
-                                <p className="h2">{modalTitle}</p>
-                                <button
-                                    className="CloseModal btn btn-danger"
-                                    onClick={() => toggleModal()}
-                                >
-                                    X
-                                </button>
-                                <p>{modalDesc}</p>
-                                <br />
-                                <div
-                                    className="d-flex flex-row"
-                                    style={{
-                                        justifyContent: "space-around",
-                                    }}
-                                >
-                                    <button className="btn btn-lg">
-                                        <a href={modalLink} target="_blank">
-                                            <p className="btn-cta-text">
-                                                Find out more!
-                                            </p>
-                                        </a>
-                                    </button>
-                                </div>
-                            </div>
+                                        Results
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#/orgs">
+                                        Organisations
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#/profile">
+                                        Profile
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                    )}
+                    </nav>
                 </div>
-            </div>
+                <div className="d-flex flex-row">
+                    <div className="startText">
+                        <h1 className="quoteText">
+                            "Happiness is when what you <strong>think</strong>,
+                            what you <strong>say</strong>, and what you
+                            <strong> do</strong> are in harmony."
+                        </h1>
+                        <p>~Mahatma Gandhi</p>
+                    </div>
+                    <div style={{ width: "40%" }}></div>
+                </div>
+                <h1 className="fade-in-fade-out">
+                    We think you'll fit best in these organisations (Sorted from
+                    best to worst):
+                </h1>
+                <div className="pop-up-flex">
+                    <div
+                        className="pop-up-flex-row"
+                        style={{ flexWrap: "wrap" }}
+                    >
+                        {sortedOrg.map((organisation, index) => {
+                            return (
+                                <div
+                                    className="container container-purple pop-up d-flex flex-column"
+                                    style={{
+                                        justifyContent: "space-evenly",
+                                        marginBottom: "4vw",
+                                    }}
+                                    key={index}
+                                >
+                                    <p>
+                                        {index + 1}.{" "}
+                                        {
+                                            overAllOrganisations[organisation]
+                                                .name
+                                        }
+                                        <br />
+                                        {(
+                                            (goodness[organisation] /
+                                                finalData.length) *
+                                            100
+                                        ).toFixed(2)}
+                                        % score
+                                    </p>
+                                    <div
+                                        className="d-flex flex-row"
+                                        style={{
+                                            justifyContent: "space-between",
+                                            width: "100%",
+                                        }}
+                                    >
+                                        <button
+                                            className="btn btn-lg"
+                                            onClick={() =>
+                                                toggleModal(
+                                                    overAllOrganisations[
+                                                        organisation
+                                                    ].name,
+                                                    overAllOrganisations[
+                                                        organisation
+                                                    ].desc,
+                                                    overAllOrganisations[
+                                                        organisation
+                                                    ].url
+                                                )
+                                            }
+                                        >
+                                            <p className="btn-cta-text">
+                                                View More
+                                            </p>
+                                        </button>
+                                        <img
+                                            className="org-logo"
+                                            src={
+                                                overAllOrganisations[
+                                                    organisation
+                                                ].image
+                                            }
+                                        ></img>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                        {modalShown && (
+                            <div className="Modal">
+                                <div
+                                    onClick={() => toggleModal()}
+                                    className="overlay"
+                                ></div>
+                                <div className="modalcontent modalcontent-orange">
+                                    <p className="h2">{modalTitle}</p>
+                                    <button
+                                        className="CloseModal btn btn-danger"
+                                        onClick={() => toggleModal()}
+                                    >
+                                        X
+                                    </button>
+                                    <p>{modalDesc}</p>
+                                    <br />
+                                    <div
+                                        className="d-flex flex-row"
+                                        style={{
+                                            justifyContent: "space-around",
+                                        }}
+                                    >
+                                        <button className="btn btn-lg">
+                                            <a href={modalLink} target="_blank">
+                                                <p className="btn-cta-text">
+                                                    Find out more!
+                                                </p>
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
             </div>
             <footer>
                 Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,

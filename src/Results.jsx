@@ -24,6 +24,8 @@ function Results() {
     var user = auth.currentUser;
 
     const db = getDatabase();
+
+    // We gotta do this one day
     /*
     if (user !== null) {
         const quizRef = ref(db, "users/" + user.uid + "/quiz");

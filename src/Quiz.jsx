@@ -128,7 +128,7 @@ function Quiz() {
             optn2: "No",
             optn1Result: "help the environment",
             optn2Result: "not help the environment",
-        }
+        },
     ];
     return (
         <div>
@@ -136,149 +136,156 @@ function Quiz() {
             <script src="./assets/ex_libs/bootstrap_4/bootstrap.js"></script>
             <noscript>You need to enable JavaScript to run this app.</noscript>
             <div className="main-content">
-            <div className="navbar-container">
-                <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
-                    <a className="navbar-brand" href="#/">
-                        <img
-                            src="assets/media/favicon.png"
-                            alt="Logo"
-                            className="logo"
-                        />
-                    </a>
-                    <a
-                        className="navbar-brand navbar-nav-text-heading"
-                        href="#/"
-                    >
-                        Ark Connections
-                    </a>
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapsibleNavbar"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div
-                        className="collapse navbar-collapse"
-                        id="collapsibleNavbar"
-                    >
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a className="nav-link" href="#/">
-                                    Home
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link active" href="#/quiz">
-                                    Quiz
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#/results">
-                                    Results
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#/orgs">
-                                    Organisations
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#/profile">
-                                    Profile
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div className="d-flex flex-row">
-                <div className="startText">
-                    <h1 className="quoteText">
-                        Quiz: Question {currentQuestionIndex + 1} of{" "}
-                        {data.length}
-                    </h1>
-                    <p>{data[currentQuestionIndex].question}</p>
+                <div className="navbar-container">
+                    <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
+                        <a className="navbar-brand" href="#/">
+                            <img
+                                src="assets/media/favicon.png"
+                                alt="Logo"
+                                className="logo"
+                            />
+                        </a>
+                        <a
+                            className="navbar-brand navbar-nav-text-heading"
+                            href="#/"
+                        >
+                            Ark Connections
+                        </a>
+                        <button
+                            className="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapsibleNavbar"
+                        >
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div
+                            className="collapse navbar-collapse"
+                            id="collapsibleNavbar"
+                        >
+                            <ul className="navbar-nav">
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#/">
+                                        Home
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a
+                                        className="nav-link active"
+                                        href="#/quiz"
+                                    >
+                                        Quiz
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#/results">
+                                        Results
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#/orgs">
+                                        Organisations
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#/profile">
+                                        Profile
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-                <div style={{ width: "40%" }}></div>
-            </div>
-            {finalData[currentQuestionIndex] != 0 ? (
-                <h1>
-                    For this question you answered{" "}
-                    {finalData[currentQuestionIndex]}
-                </h1>
-            ) : (
-                <h1>Remember to answer as sincerely as possible!</h1>
-            )}
-            <div className="pop-up-flex">
-            <div className="pop-up-flex-row">
-                <button
-                    className="container btn btn-quiz btn-orange container-results"
-                    style={{ justifyContent: "space-around" }}
-                    onClick={() =>
-                        changeQuestionIndex(
-                            1,
-                            currentQuestionIndex,
-                            data[currentQuestionIndex].optn1Result
-                        )
-                    }
-                >
-                    <p className="btn-cta-text">
-                        {data[currentQuestionIndex].optn1}
-                    </p>
-                </button>
-                <button
-                    className="container btn btn-quiz btn-purple container-results"
-                    style={{ justifyContent: "space-around" }}
-                    onClick={() =>
-                        changeQuestionIndex(
-                            1,
-                            currentQuestionIndex,
-                            data[currentQuestionIndex].optn2Result
-                        )
-                    }
-                >
-                    <p className="btn-cta-text">
-                        {data[currentQuestionIndex].optn2}
-                    </p>
-                </button>
-            </div>
-            <div className="pop-up-flex-row" style={{justifyContent: "center"}}>
-                <button
-                    className="container btn btn-quiz btn-purple container-results"
-                    style={{ justifyContent: "space-around" }}
-                    onClick={() =>
-                        changeQuestionIndex(
-                            -1,
-                            currentQuestionIndex,
-                            finalData[currentQuestionIndex]
-                        )
-                    }
-                >
-                    <p className="btn-cta-text">Back</p>
-                </button>
+                <div className="d-flex flex-row">
+                    <div className="startText">
+                        <h1 className="quoteText">
+                            Quiz: Question {currentQuestionIndex + 1} of{" "}
+                            {data.length}
+                        </h1>
+                        <p>{data[currentQuestionIndex].question}</p>
+                    </div>
+                    <div style={{ width: "40%" }}></div>
+                </div>
                 {finalData[currentQuestionIndex] != 0 ? (
-                <button
-                className="container btn btn-quiz btn-orange container-results"
-                style={{ justifyContent: "space-around" }}
-                onClick={() =>
-                    changeQuestionIndex(
-                        1,
-                        currentQuestionIndex,
-                        finalData[currentQuestionIndex]
-                    )
-                }
-            >
-                <p className="btn-cta-text">Next</p>
-            </button>
-            ) : (
-                null
-            )} </div>
+                    <h1>
+                        For this question you answered{" "}
+                        {finalData[currentQuestionIndex]}
+                    </h1>
+                ) : (
+                    <h1>Remember to answer as sincerely as possible!</h1>
+                )}
+                <div className="pop-up-flex">
+                    <div className="pop-up-flex-row">
+                        <button
+                            className="container btn btn-quiz btn-orange container-results"
+                            style={{ justifyContent: "space-around" }}
+                            onClick={() =>
+                                changeQuestionIndex(
+                                    1,
+                                    currentQuestionIndex,
+                                    data[currentQuestionIndex].optn1Result
+                                )
+                            }
+                        >
+                            <p className="btn-cta-text">
+                                {data[currentQuestionIndex].optn1}
+                            </p>
+                        </button>
+                        <button
+                            className="container btn btn-quiz btn-purple container-results"
+                            style={{ justifyContent: "space-around" }}
+                            onClick={() =>
+                                changeQuestionIndex(
+                                    1,
+                                    currentQuestionIndex,
+                                    data[currentQuestionIndex].optn2Result
+                                )
+                            }
+                        >
+                            <p className="btn-cta-text">
+                                {data[currentQuestionIndex].optn2}
+                            </p>
+                        </button>
+                    </div>
+                    <div
+                        className="pop-up-flex-row"
+                        style={{ justifyContent: "center" }}
+                    >
+                        <button
+                            className="container btn btn-quiz btn-purple container-results"
+                            style={{ justifyContent: "space-around" }}
+                            onClick={() =>
+                                changeQuestionIndex(
+                                    -1,
+                                    currentQuestionIndex,
+                                    finalData[currentQuestionIndex]
+                                )
+                            }
+                        >
+                            <p className="btn-cta-text">Back</p>
+                        </button>
+                        {finalData[currentQuestionIndex] != 0 ? (
+                            <button
+                                className="container btn btn-quiz btn-orange container-results"
+                                style={{ justifyContent: "space-around" }}
+                                onClick={() =>
+                                    changeQuestionIndex(
+                                        1,
+                                        currentQuestionIndex,
+                                        finalData[currentQuestionIndex]
+                                    )
+                                }
+                            >
+                                <p className="btn-cta-text">Next</p>
+                            </button>
+                        ) : null}{" "}
+                    </div>
+                </div>
             </div>
-            </div>
-            <footer>Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
-                Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram</footer>
+            <footer>
+                Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,
+                Yeoh Tian Huai, Alistair Tan Yi, Lim Kai Jun, Dhanvin Mohan Ram
+            </footer>
         </div>
     );
 }

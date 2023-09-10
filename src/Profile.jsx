@@ -34,16 +34,16 @@ function Profile() {
     };
 
     let userSignOut = () => {
-        if (confirm('Are you sure you want to sign out')) {
-        signOut(auth)
-            .then(() => {
-                console.warn("User is signed out")
-                window.open("#/", "_self")
-            })
-            .catch((err) => {
-                alert("Error:" + err + "\nSee console for details");
-                console.error(err);
-            });
+        if (confirm("Are you sure you want to sign out")) {
+            signOut(auth)
+                .then(() => {
+                    console.warn("User is signed out");
+                    window.open("#/", "_self");
+                })
+                .catch((err) => {
+                    alert("Error:" + err + "\nSee console for details");
+                    console.error(err);
+                });
         }
     };
 
@@ -63,7 +63,7 @@ function Profile() {
         if (user) {
             console.log("You are logged in as", user);
             loadSaves();
-        } 
+        }
     });
 
     return (
@@ -75,79 +75,145 @@ function Profile() {
                     You need to enable JavaScript to run this app.
                 </noscript>
                 <div className="main-content">
-                <div className="navbar-container">
-                    <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
-                        <a className="navbar-brand" href="#/">
-                            <img
-                                src="assets/media/favicon.png"
-                                alt="Logo"
-                                className="logo"
-                            />
-                        </a>
-                        <a
-                            className="navbar-brand navbar-nav-text-heading"
-                            href="#/"
-                        >
-                            Ark Connections
-                        </a>
-                        <button
-                            className="navbar-toggler"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#collapsibleNavbar"
-                        >
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div
-                            className="collapse navbar-collapse"
-                            id="collapsibleNavbar"
-                        >
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#/">
-                                        Home
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#/quiz">
-                                        Quiz
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#/results">
-                                        Results
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                <a className="nav-link" href="#/orgs">
-                                    Organisations
-                                </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a
-                                        className="nav-link active"
-                                        href="#/profile"
+                    <div className="navbar-container">
+                        <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
+                            <a className="navbar-brand" href="#/">
+                                <img
+                                    src="assets/media/favicon.png"
+                                    alt="Logo"
+                                    className="logo"
+                                />
+                            </a>
+                            <a
+                                className="navbar-brand navbar-nav-text-heading"
+                                href="#/"
+                            >
+                                Ark Connections
+                            </a>
+                            <button
+                                className="navbar-toggler"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#collapsibleNavbar"
+                            >
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
+                            <div
+                                className="collapse navbar-collapse"
+                                id="collapsibleNavbar"
+                            >
+                                <ul className="navbar-nav">
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#/">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#/quiz">
+                                            Quiz
+                                        </a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a
+                                            className="nav-link"
+                                            href="#/results"
+                                        >
+                                            Results
+                                        </a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#/orgs">
+                                            Organisations
+                                        </a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a
+                                            className="nav-link active"
+                                            href="#/profile"
+                                        >
+                                            Profile
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div className="d-flex flex-row">
+                    <div className="startText">
+                        <h1 className="quoteText">
+                            "Hakuna <strong>Matata</strong>!"
+                        </h1>
+                        <p>~Timon and Pumbaa, The Lion King (1994)</p>
+                    </div>
+                    <div style={{ width: "40%" }}></div>
+                </div>
+                <h1>Your account: </h1>
+                {user ? (
+                    <div>
+                        <div className="pop-up-flex">
+                            <div className="pop-up-flex-row">
+                                <div
+                                    className="container container-orange pop-up d-flex flex-column container-results"
+                                    style={{
+                                        alignItems: "center",
+                                        height: "200px",
+                                        justifyContent: "center",
+                                    }}
+                                >
+                                    <i className="fas fa-user-alt" id="pfp"></i>
+                                    <img
+                                        className="pop-up-flex"
+                                        width="150"
+                                        height="150"
+                                        style={{
+                                            display: "none",
+                                            justifyContent: "space-around",
+                                        }}
+                                        id="profilePic"
+                                    ></img>
+                                </div>
+                                <div
+                                    className="container container-purple pop-up d-flex flex-column container-results"
+                                    style={{
+                                        alignItems: "center",
+                                        height: "200px",
+                                        justifyContent: "center",
+                                    }}
+                                >
+                                    <p
+                                        id="user-id"
+                                        className="pop-up-flex"
+                                        style={{ textAlign: "center" }}
                                     >
-                                        Profile
-                                    </a>
-                                </li>
-                            </ul>
+                                        Unknown User
+                                        <i
+                                            className="fas fa-pen"
+                                            id="edit-name"
+                                        ></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="pop-up-flex-row">
+                                <div
+                                    className="container container-purple pop-up d-flex flex-column container-results"
+                                    style={{
+                                        alignItems: "center",
+                                        height: "200px",
+                                        justifyContent: "center",
+                                    }}
+                                >
+                                    <button
+                                        className="btn btn-danger btn-lg"
+                                        onClick={() => userSignOut()}
+                                    >
+                                        Sign Out
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                    </nav>
-                </div>
-            </div>
-            <div className="d-flex flex-row">
-                <div className="startText">
-                    <h1 className="quoteText">
-                        "Hakuna <strong>Matata</strong>!"
-                    </h1>
-                    <p>~Timon and Pumbaa, The Lion King (1994)</p>
-                </div>
-                <div style={{ width: "40%" }}></div>
-            </div>
-            <h1>Your account: </h1>
-            {user ? (
-                <div>
+                    </div>
+                ) : (
                     <div className="pop-up-flex">
                         <div className="pop-up-flex-row">
                             <div
@@ -158,73 +224,17 @@ function Profile() {
                                     justifyContent: "center",
                                 }}
                             >
-                                <i className="fas fa-user-alt" id="pfp"></i>
-                                <img
-                                    className="pop-up-flex"
-                                    width="150"
-                                    height="150"
-                                    style={{
-                                        display: "none",
-                                        justifyContent: "space-around",
-                                    }}
-                                    id="profilePic"
-                                ></img>
-                            </div>
-                            <div
-                                className="container container-purple pop-up d-flex flex-column container-results"
-                                style={{
-                                    alignItems: "center",
-                                    height: "200px",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                <p
-                                    id="user-id"
-                                    className="pop-up-flex"
-                                    style={{ textAlign: "center" }}
+                                <button
+                                    id="signBtn"
+                                    className="btn btn-success btn-lg"
+                                    onClick={() => userLogin()}
                                 >
-                                    Unknown User
-                                    <i
-                                        className="fas fa-pen"
-                                        id="edit-name"
-                                    ></i>
-                                </p>
-                            </div>
-                        </div>
-                        <div className="pop-up-flex-row">
-                            <div
-                                className="container container-purple pop-up d-flex flex-column container-results"
-                                style={{
-                                    alignItems: "center",
-                                    height: "200px",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                <button className="btn btn-danger btn-lg" onClick={() => userSignOut()}>
-                                    Sign Out
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            ) : (
-            <div className="pop-up-flex">
-                        <div className="pop-up-flex-row">
-                            <div
-                                className="container container-orange pop-up d-flex flex-column container-results"
-                                style={{
-                                    alignItems: "center",
-                                    height: "200px",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                <button id="signBtn" className="btn btn-success btn-lg" onClick={() => userLogin()}>
                                     Sign In
                                 </button>
                             </div>
                         </div>
                     </div>
-            )}
+                )}
             </div>
             <footer>
                 Made with ❤️ by members of the 2023 SST Inc. : Kam Yau Shing,

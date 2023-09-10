@@ -48,7 +48,7 @@ p {
 }
 
 .hr {
-    border-width:0;
+    border-width: 0;
     margin: auto;
     margin-top: 14px;
     margin-bottom: 14px;
@@ -231,7 +231,7 @@ strong {
         font-size: 1.75vw;
     }
 
-    .org-logo{
+    .org-logo {
         width: 10vw;
         padding: 1vw;
     }
@@ -294,7 +294,7 @@ strong {
         font-size: 4.75vw;
     }
 
-    .org-logo{
+    .org-logo {
         width: 22vw;
         max-height: 22vw;
         padding: 1vw;
