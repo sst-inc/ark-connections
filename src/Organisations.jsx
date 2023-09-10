@@ -14,17 +14,19 @@ function Organisations() {
             <noscript>You need to enable JavaScript to run this app.</noscript>
             <div id="navbar-container">
                 <nav className="navbar navbar-expand-sm bg-lightPurple navbar-dark fixed-top">
-                    <a className="navbar-brand" href="#/">
-                        <i className="fa-solid fa-arrow-left"></i> Back to home
-                    </a>
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapsibleNavbar"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+                <a className="navbar-brand" href="#/">
+                            <img
+                                src="assets/media/favicon.png"
+                                alt="Logo"
+                                className="logo"
+                            />
+                        </a>
+                        <a
+                            className="navbar-brand navbar-nav-text-heading"
+                            href="#/"
+                        >
+                            Ark Connections
+                        </a>
                     <div
                         className="collapse navbar-collapse"
                         id="collapsibleNavbar"
