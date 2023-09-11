@@ -266,7 +266,7 @@ function Homepage() {
                                                     <button className="btn btn-lg">
                                                         <a href="#/quiz">
                                                             <p className="btn-cta-text">
-                                                                Take the quiz
+                                                                Check your suitability
                                                             </p>
                                                         </a>
                                                     </button>
@@ -351,7 +351,7 @@ function Homepage() {
                                                     <button className="btn btn-lg">
                                                         <a href="#/quiz">
                                                             <p className="btn-cta-text">
-                                                                Take the quiz
+                                                                Check your suitability
                                                             </p>
                                                         </a>
                                                     </button>
