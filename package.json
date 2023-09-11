@@ -39,6 +39,7 @@
         "add": "^2.0.6",
         "gh-pages": "^5.0.0",
         "or": "^0.2.0",
-        "yarn": "^1.22.19"
+        "yarn": "^1.22.19",
+        "plugins": "@babel/plugin-proposal-private-property-in-object"
     }
 }
