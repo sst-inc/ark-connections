@@ -1,70 +1,12 @@
-# Getting Started with Create React App
+## Problem statement
+How can we allow organisations to identify the suitable people to volunteer with them and allow people find the right organisations to volunteer with faster and easier by saving them time searching for an organisation to volunteer with.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How it solves the problem:
+Our website application (Web App) has many functionalities all which work towards the common goal of simplifying the process of getting into an organisation. There are two parts to how our website works. 
 
-## Available Scripts
+1. Part one is us reaching out to the organisation and asking them if they would be interested in working with us and being on our website. Once we receive the confirmation that they would like to be on our website we would ask them for what type of people they would like to volunteer for them. For example we would ask them for traits such as if they prefer working with humans or animals or if they are more introverted or extroverted. Once we have gotten their preference, we would add their organisation into our Web App and add their volunteer preference into the code of our website and update it so as to allow people to now be able to be chosen for the website if they are the type of person that the organisation wants.
+  
+2. Part two is on the user's side of things. When the user enters the homepage, he/she would see an Quiz button on the page and in the header bar, once selected, the user would be sent to the quiz page where they can take a quiz with the same set of questions shown to the organisations and once completed, we will show the organisations they are fit for and even rank them for them based on their percentage to what the organisation is looking out for. That way they can see what organisation they are best suited for.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Main idea
+The main idea of the app is to allow organisations to identify suitable people to volunteer with them and allow people to identify the right organisations to volunteer with to make a more cohesive volunteering experience. The app will allow individuals to take a quiz to analyse their skills and allocate them to a social service they are best suited to volunteer with. 
