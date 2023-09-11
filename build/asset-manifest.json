@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ark-connections/static/css/main.9ab402be.css",
-    "main.js": "/ark-connections/static/js/main.f3c7f640.js",
+    "main.js": "/ark-connections/static/js/main.e7bfc27e.js",
     "static/js/787.93618544.chunk.js": "/ark-connections/static/js/787.93618544.chunk.js",
     "static/media/ray-of-hope.png": "/ark-connections/static/media/ray-of-hope.20510dc5d50d0d2be08f.png",
     "static/media/sinc.png": "/ark-connections/static/media/sinc.11bc175da4e273456b50.png",
@@ -10,11 +10,11 @@
     "static/media/ncss.png": "/ark-connections/static/media/ncss.b2867dfee18fbd946b93.png",
     "index.html": "/ark-connections/index.html",
     "main.9ab402be.css.map": "/ark-connections/static/css/main.9ab402be.css.map",
-    "main.f3c7f640.js.map": "/ark-connections/static/js/main.f3c7f640.js.map",
+    "main.e7bfc27e.js.map": "/ark-connections/static/js/main.e7bfc27e.js.map",
     "787.93618544.chunk.js.map": "/ark-connections/static/js/787.93618544.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9ab402be.css",
-    "static/js/main.f3c7f640.js"
+    "static/js/main.e7bfc27e.js"
   ]
 }
